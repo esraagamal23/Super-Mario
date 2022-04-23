@@ -1,0 +1,10 @@
+^D:\3RD2SEMSTER\GRAPHICDESIGN\PROJECTTEAM_PHASE2\CG_PHASE2\CMPN205 PHASE 2+3 - STUDENT VERSION\CMAKELISTS.TXT
+setlocal
+D:\esraa\برامج\CMake\cmake-3.23.0-rc2-windows-x86_64\bin\cmake.exe "-SD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version" -BD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build --check-stamp-file D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

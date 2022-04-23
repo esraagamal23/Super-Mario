@@ -1,0 +1,18 @@
+# CMake generation dependency list for this directory.
+D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/CMakeLists.txt
+D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/glfw3.pc.in
+D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/glfw3Config.cmake.in
+D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/glfw_config.h.in
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/CMakeDependentOption.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/CheckIncludeFile.c.in
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/CheckIncludeFile.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/CheckLibraryExists.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/FindPackageMessage.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/FindThreads.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/GNUInstallDirs.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake
+D:/esraa/برامج/CMake/cmake-3.23.0-rc2-windows-x86_64/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake
