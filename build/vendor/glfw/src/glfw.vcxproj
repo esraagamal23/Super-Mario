@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7607E79F-4A19-3ACD-95CE-37DD1EED1B11}</ProjectGuid>
+    <ProjectGuid>{242A81C0-F86C-380B-BEF4-04D9AAC7CA93}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>win32</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">glfw.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">glfw.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">glfw.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">glfw.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -95,10 +95,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_GLFW_USE_CONFIG_H;_UNICODE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -128,10 +128,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_GLFW_USE_CONFIG_H;_UNICODE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -161,10 +161,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_GLFW_USE_CONFIG_H;_UNICODE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>
@@ -193,10 +193,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_GLFW_USE_CONFIG_H;_UNICODE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src;D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,11 +208,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\CMakeLists.txt">
+    <CustomBuild Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
-D:\esraa\برامج\CMake\cmake-3.23.0-rc2-windows-x86_64\bin\cmake.exe "-SD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version" -BD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build --check-stamp-file D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version" "-BD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build" --check-stamp-file "D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -221,11 +221,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
-D:\esraa\برامج\CMake\cmake-3.23.0-rc2-windows-x86_64\bin\cmake.exe "-SD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version" -BD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build --check-stamp-file D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version" "-BD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build" --check-stamp-file "D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -234,11 +234,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
-D:\esraa\برامج\CMake\cmake-3.23.0-rc2-windows-x86_64\bin\cmake.exe "-SD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version" -BD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build --check-stamp-file D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version" "-BD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build" --check-stamp-file "D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -247,11 +247,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
-D:\esraa\برامج\CMake\cmake-3.23.0-rc2-windows-x86_64\bin\cmake.exe "-SD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version" -BD:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build --check-stamp-file D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version" "-BD:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build" --check-stamp-file "D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build/vendor/glfw/src/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -260,40 +260,40 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\context.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\init.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\input.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\monitor.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\vulkan.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\window.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_init.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_joystick.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_monitor.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_time.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_thread.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_window.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\wgl_context.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\egl_context.c" />
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\osmesa_context.c" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\internal.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\mappings.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\vendor\glfw\src\glfw_config.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include\GLFW\glfw3.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include\GLFW\glfw3native.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_platform.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_joystick.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\wgl_context.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\egl_context.h" />
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\osmesa_context.h" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\context.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\init.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\input.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\monitor.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\vulkan.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\window.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_init.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_joystick.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_monitor.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_time.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_thread.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_window.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\wgl_context.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\egl_context.c" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\osmesa_context.c" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\internal.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\mappings.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\vendor\glfw\src\glfw_config.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include\GLFW\glfw3.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\include\GLFW\glfw3native.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_platform.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\win32_joystick.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\wgl_context.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\egl_context.h" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glfw\src\osmesa_context.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\build\ZERO_CHECK.vcxproj">
-      <Project>{3F0CB735-BC0B-3528-833A-16454D453B09}</Project>
+    <ProjectReference Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\build\ZERO_CHECK.vcxproj">
+      <Project>{5F68087A-C97C-3A48-B3A3-22DAAB111097}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

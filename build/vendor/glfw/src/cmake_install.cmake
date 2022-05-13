@@ -1,4 +1,4 @@
-# Install script for directory: D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src
+# Install script for directory: D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
