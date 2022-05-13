@@ -142,20 +142,37 @@ namespace our {
 
         //TODO: (Req 8) Modify the following line such that "cameraForward" contains a vector pointing the camera forward direction
         // HINT: See how you wrote the CameraComponent::getViewMatrix, it should help you solve this one
-        glm::vec3 cameraForward = glm::vec3(0.0, 0.0, 0.0);
+        glm::vec3 cameraForward = glm::vec3(0.0, 0.0, -1.0f);
         std::sort(transparentCommands.begin(), transparentCommands.end(), [cameraForward](const RenderCommand& first, const RenderCommand& second){
             //TODO: (Req 8) Finish this function
             // HINT: the following return should return true "first" should be drawn before "second". 
-            return false;
+            
+            // First we have to calculate the distance between the camera center to the object center
+            // so, we can do this using the dot product
+            float cameraToFirstobjCenter = glm::dot(cameraForward, first.center);
+            float cameraToSecondobjCenter = glm::dot(cameraForward, second.center);
+
+            // Then return true if the first object is farest than the second
+            return cameraToFirstobjCenter > cameraToSecondobjCenter;
         });
 
         //TODO: (Req 8) Get the camera ViewProjection matrix and store it in VP
-        glm::mat4 VP = glm::mat4(1.0f);
+        /// here we get the camera projection matrix
+        glm::mat4 VP = camera->getProjectionMatrix(windowSize);
+
         //TODO: (Req 8) Set the OpenGL viewport using windowSize
+        /// set the viewport with the window aspect ratio
+        glViewport(0, 0, windowSize[0], windowSize[1]);
 
         //TODO: (Req 8) Set the clear color to black and the clear depth to 1
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClearDepth(1.0);
         
         //TODO: (Req 8) Set the color mask to true and the depth mask to true (to ensure the glClear will affect the framebuffer)
+        /// depth mask
+        glDepthMask(true);
+        /// depth colors mask
+        glColorMask(true, true, true, true);
         
 
         // If there is a postprocess material, bind the framebuffer
@@ -165,9 +182,15 @@ namespace our {
         }
 
         //TODO: (Req 8) Clear the color and depth buffers
-        
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
         //TODO: (Req 8) Draw all the opaque commands
         // Don't forget to set the "transform" uniform to be equal the model-view-projection matrix for each render command
+        /// This method loops over each command and draw it
+        for(auto command : opaqueCommands)
+        {
+            command.mesh->draw();
+        }
         
         // If there is a sky material, draw the sky
         if(this->skyMaterial){
@@ -193,7 +216,11 @@ namespace our {
         }
         //TODO: (Req 8) Draw all the transparent commands
         // Don't forget to set the "transform" uniform to be equal the model-view-projection matrix for each render command
-        
+        /// This method loops over each command and draw it
+        for(auto command : transparentCommands)
+        {
+            command.mesh->draw();
+        }
 
         // If there is a postprocess material, apply postprocessing
         if(postprocessMaterial){
