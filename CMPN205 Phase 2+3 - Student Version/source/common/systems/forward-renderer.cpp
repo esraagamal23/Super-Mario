@@ -1,8 +1,7 @@
 #include "forward-renderer.hpp"
 #include "../mesh/mesh-utils.hpp"
 #include "../texture/texture-utils.hpp"
-#include<iostream>
-using namespace std;
+
 namespace our {
 
     void ForwardRenderer::initialize(glm::ivec2 windowSize, const nlohmann::json& config){
@@ -198,9 +197,12 @@ namespace our {
         // If there is a postprocess material, apply postprocessing
         if(postprocessMaterial){
             //TODO: (Req 10) Return to the default framebuffer
-            
+            glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);       
             //TODO: (Req 10) Setup the postprocess material and draw the fullscreen triangle
-            
+            postprocessMaterial->setup();
+    
+      
+
         }
     }
 
