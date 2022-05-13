@@ -16,7 +16,7 @@ namespace our {
         // Here we multiply the local transformation matrix by its parent's trans matrix
         // So if the parent is null, then only the entity matirx will return, otherwise 
         // the entity will call the parent transformation matrix till the end
-        if(!parent)
+        if(parent)
         return parent->localTransform.toMat4() * localTransform.toMat4();
         else
         return localTransform.toMat4();
