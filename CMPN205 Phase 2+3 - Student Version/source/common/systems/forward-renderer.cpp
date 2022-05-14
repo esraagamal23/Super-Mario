@@ -24,7 +24,11 @@ namespace our {
             // Hints: the sky will be draw after the opaque objects so we would need depth testing but which depth funtion should we pick?
             // We will draw the sphere from the inside, so what options should we pick for the face culling.
             PipelineState skyPipelineState{};
-            
+            skyPipelineState.faceCulling.enabled = true;
+            skyPipelineState.faceCulling.culledFace = GL_FRONT;
+            skyPipelineState.depthTesting.enabled = true;
+            skyPipelineState.depthTesting.function = GL_LESS;
+
             // Load the sky texture (note that we don't need mipmaps since we want to avoid any unnecessary blurring while rendering the sky)
             std::string skyTextureFile = config.value<std::string>("sky", "");
             Texture2D* skyTexture = texture_utils::loadImage(skyTextureFile, false);
@@ -142,7 +146,7 @@ namespace our {
 
         //TODO: (Req 8) Modify the following line such that "cameraForward" contains a vector pointing the camera forward direction
         // HINT: See how you wrote the CameraComponent::getViewMatrix, it should help you solve this one
-        glm::vec3 cameraForward = glm::vec3(0.0, 0.0, -1.0f);
+        glm::vec3 cameraForward = camera->getViewMatrix()[2];
         std::sort(transparentCommands.begin(), transparentCommands.end(), [cameraForward](const RenderCommand& first, const RenderCommand& second){
             //TODO: (Req 8) Finish this function
             // HINT: the following return should return true "first" should be drawn before "second". 
@@ -165,8 +169,6 @@ namespace our {
         glViewport(0, 0, windowSize[0], windowSize[1]);
 
         //TODO: (Req 8) Set the clear color to black and the clear depth to 1
-        glEnable(GL_DEPTH_TEST);
-        glDepthFunc(GL_LESS);
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClearDepth(1.0);
         
@@ -201,13 +203,24 @@ namespace our {
         // If there is a sky material, draw the sky
         if(this->skyMaterial){
             //TODO: (Req 9) setup the sky material
-            
+            skyMaterial->setup();
             //TODO: (Req 9) Get the camera position
-
-            //TODO: (Req 9) Create a model matrix for the sy such that it always follows the camera (sky sphere center = camera position)
-
+            glm::vec3 cameraPosition = camera->getOwner()->getLocalToWorldMatrix() * glm::vec4(camera->getOwner()->localTransform.position, 1);
+            //TODO: (Req 9) Create a model matrix for the sky such that it always follows the camera (sky sphere center = camera position)
+            // Created the translation matrix that translate the sphere to the center of the camera
+            glm::mat4 translationMatrix = glm::translate(
+                glm::mat4(1.0f), 
+                cameraPosition
+                );
+            glm::mat4 scaleMatrix = glm::scale(
+                glm::mat4(1.0f),
+                glm::vec3(camera->far)
+            );
+            glm::mat4 modelMatrix = translationMatrix * scaleMatrix;
             //TODO: (Req 9) We want the sky to be drawn behind everything (in NDC space, z=1)
-            // We can acheive the is by multiplying by an extra matrix after the projection but what values should we put in it?
+            // We can acheive this by multiplying by an extra matrix after the projection but what values should we put in it?
+
+            // Here the third row third column will be modified into (0, 0, 0, 1) as Z index will be 1
             glm::mat4 alwaysBehindTransform = glm::mat4(
             //  Row1, Row2, Row3, Row4
                 1.0f, 0.0f, 0.0f, 0.0f, // Column1
@@ -216,8 +229,9 @@ namespace our {
                 0.0f, 0.0f, 0.0f, 1.0f  // Column4
             );
             //TODO: (Req 9) set the "transform" uniform
-            
+            skyMaterial->shader->set("transform", VP * modelMatrix);
             //TODO: (Req 9) draw the sky sphere
+            skySphere->draw();
             
         }
         //TODO: (Req 8) Draw all the transparent commands
