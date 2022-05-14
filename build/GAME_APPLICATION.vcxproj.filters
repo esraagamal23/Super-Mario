@@ -1,201 +1,201 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\main.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\application.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\asset-loader.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\asset-loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\shader\shader.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\shader\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\mesh-utils.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\mesh-utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\sampler.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\sampler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\texture-utils.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\texture-utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\screenshot.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\screenshot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\pipeline-state.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\pipeline-state.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\material.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\material.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\transform.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\entity.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\world.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\world.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\camera.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\mesh-renderer.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\mesh-renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\free-camera-controller.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\free-camera-controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\movement.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\movement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glad\src\gl.c">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glad\src\gl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_demo.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_draw.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_draw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_widgets.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_impl\imgui_impl_glfw.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_impl\imgui_impl_glfw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_impl\imgui_impl_opengl3.cpp">
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\imgui\imgui_impl\imgui_impl_opengl3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\play-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\play-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\mesh-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\mesh-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\transform-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\transform-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\pipeline-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\pipeline-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\texture-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\texture-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\sampler-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\sampler-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\material-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\material-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\entity-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\entity-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\renderer-test-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\states\renderer-test-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\application.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\input\keyboard.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\input\keyboard.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\input\mouse.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\input\mouse.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\asset-loader.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\asset-loader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\deserialize-utils.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\deserialize-utils.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\shader\shader.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\shader\shader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\vertex.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\vertex.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\mesh.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\mesh.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\mesh-utils.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\mesh\mesh-utils.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\sampler.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\sampler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\texture2d.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\texture2d.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\texture-utils.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\texture-utils.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\screenshot.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\texture\screenshot.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\pipeline-state.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\pipeline-state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\material.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\material\material.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\component.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\component.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\transform.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\transform.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\entity.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\entity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\world.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\ecs\world.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\camera.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\camera.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\mesh-renderer.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\mesh-renderer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\free-camera-controller.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\free-camera-controller.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\movement.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\movement.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\component-deserializer.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\component-deserializer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\free-camera-controller.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\free-camera-controller.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\movement.hpp">
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\movement.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\3rd2Semster\GraphicDesign\projectTeam_phase2\CG_Phase2\CMPN205 Phase 2+3 - Student Version\CMakeLists.txt" />
+    <CustomBuild Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{39136F92-0FEB-3A28-909B-28D067E9E447}</UniqueIdentifier>
+      <UniqueIdentifier>{756A4966-1EC5-3F31-BE83-47A30C81A554}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{CA3B1737-D291-319C-B649-154F17CD8DCF}</UniqueIdentifier>
+      <UniqueIdentifier>{351B2C00-9A6A-3B49-971F-4E6F5C831785}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

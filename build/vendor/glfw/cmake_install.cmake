@@ -1,8 +1,8 @@
-# Install script for directory: D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw
+# Install script for directory: D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/CMPN205 Phase 2+3 - Student Version/vendor/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/GFX-LAB")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/GFX-LAB")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/3rd2Semster/GraphicDesign/projectTeam_phase2/CG_Phase2/build/vendor/glfw/src/cmake_install.cmake")
+  include("D:/study affairs/syllabus/3rd year/2nd semester/computer graphics/CG_Phase2/build/vendor/glfw/src/cmake_install.cmake")
 
 endif()
 
