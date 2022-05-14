@@ -157,14 +157,16 @@ namespace our {
         });
 
         //TODO: (Req 8) Get the camera ViewProjection matrix and store it in VP
-        /// here we get the camera projection matrix
-        glm::mat4 VP = camera->getProjectionMatrix(windowSize);
+        /// here we get the camera projection matrix multiplied by view matrix
+        glm::mat4 VP = camera->getProjectionMatrix(windowSize) * camera->getViewMatrix();
 
         //TODO: (Req 8) Set the OpenGL viewport using windowSize
         /// set the viewport with the window aspect ratio
         glViewport(0, 0, windowSize[0], windowSize[1]);
 
         //TODO: (Req 8) Set the clear color to black and the clear depth to 1
+        glEnable(GL_DEPTH_TEST);
+        glDepthFunc(GL_LESS);
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClearDepth(1.0);
         
@@ -187,8 +189,12 @@ namespace our {
         //TODO: (Req 8) Draw all the opaque commands
         // Don't forget to set the "transform" uniform to be equal the model-view-projection matrix for each render command
         /// This method loops over each command and draw it
+
+        // Get the location of the transform uniform
         for(auto command : opaqueCommands)
         {
+            command.material->setup();
+            command.material->shader->set("transform", VP * command.localToWorld);
             command.mesh->draw();
         }
         
@@ -219,6 +225,8 @@ namespace our {
         /// This method loops over each command and draw it
         for(auto command : transparentCommands)
         {
+            command.material->setup();
+            command.material->shader->set("transform", VP * command.localToWorld);
             command.mesh->draw();
         }
 
