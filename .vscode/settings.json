@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/CMPN205 Phase 2+3 - Student Version"
+    "cmake.sourceDirectory": "${workspaceFolder}/CMPN205 Phase 2+3 - Student Version",
+    "files.associations": {
+        "list": "cpp"
+    }
 }

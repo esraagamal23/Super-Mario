@@ -31,7 +31,7 @@ namespace our {
             //TODO: (Req 1) Write this function
             
     
-            elementCount=elements.size(); //element size 
+            elementCount = (GLsizei)elements.size(); //element size 
             //Vertex array generate and bind
               glGenVertexArrays(1, &VAO);
               glBindVertexArray(VAO);

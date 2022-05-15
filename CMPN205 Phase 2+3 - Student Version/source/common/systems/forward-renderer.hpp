@@ -4,7 +4,7 @@
 #include "../components/camera.hpp"
 #include "../components/mesh-renderer.hpp"
 #include "../asset-loader.hpp"
-
+#include "GLFW/glfw3.h"
 #include <glad/gl.h>
 #include <vector>
 #include <algorithm>
