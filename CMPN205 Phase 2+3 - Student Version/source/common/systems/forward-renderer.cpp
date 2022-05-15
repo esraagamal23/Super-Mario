@@ -26,7 +26,7 @@ namespace our {
             skyPipelineState.faceCulling.enabled = true;
             skyPipelineState.faceCulling.culledFace = GL_FRONT;
             skyPipelineState.depthTesting.enabled = true;
-            skyPipelineState.depthTesting.function = GL_LESS;
+            skyPipelineState.depthTesting.function = GL_LEQUAL;
 
             // Load the sky texture (note that we don't need mipmaps since we want to avoid any unnecessary blurring while rendering the sky)
             std::string skyTextureFile = config.value<std::string>("sky", "");
@@ -162,7 +162,7 @@ namespace our {
             float cameraToSecondobjCenter = glm::dot(cameraForward, second.center);
 
             // Then return true if the first object is farest than the second
-            return cameraToFirstobjCenter > cameraToSecondobjCenter;
+            return cameraToFirstobjCenter < cameraToSecondobjCenter;
         });
 
         //TODO: (Req 8) Get the camera ViewProjection matrix and store it in VP
@@ -210,31 +210,35 @@ namespace our {
             //TODO: (Req 9) setup the sky material
             skyMaterial->setup();
             //TODO: (Req 9) Get the camera position
-            glm::vec3 cameraPosition = camera->getOwner()->getLocalToWorldMatrix() * glm::vec4(camera->getOwner()->localTransform.position, 1);
+            glm::vec3 cameraPosition = camera->getOwner()->getLocalToWorldMatrix() * glm::vec4(0, 0, 0, 1);
             //TODO: (Req 9) Create a model matrix for the sky such that it always follows the camera (sky sphere center = camera position)
             // Created the translation matrix that translate the sphere to the center of the camera
             glm::mat4 translationMatrix = glm::translate(
                 glm::mat4(1.0f), 
                 cameraPosition
                 );
-            glm::mat4 scaleMatrix = glm::scale(
-                glm::mat4(1.0f),
-                glm::vec3(camera->far)
-            );
-            glm::mat4 modelMatrix = translationMatrix * scaleMatrix;
+            glm::mat4 modelMatrix = translationMatrix /** scaleMatrix*/;
             //TODO: (Req 9) We want the sky to be drawn behind everything (in NDC space, z=1)
             // We can acheive this by multiplying by an extra matrix after the projection but what values should we put in it?
 
             // Here the third row third column will be modified into (0, 0, 0, 1) as Z index will be 1
+            // 1000 x      x
+            // 0100 y   =  y
+            // 0001 z      1
+            // 0001 1      1
+            // x
+            // y
+            // z
+            // 1
             glm::mat4 alwaysBehindTransform = glm::mat4(
             //  Row1, Row2, Row3, Row4
                 1.0f, 0.0f, 0.0f, 0.0f, // Column1
                 0.0f, 1.0f, 0.0f, 0.0f, // Column2
-                0.0f, 0.0f, 1.0f, 0.0f, // Column3
-                0.0f, 0.0f, 0.0f, 1.0f  // Column4
+                0.0f, 0.0f, 0.0f, 0.0f, // Column3
+                0.0f, 0.0f, 1.0f, 1.0f  // Column4
             );
             //TODO: (Req 9) set the "transform" uniform
-            skyMaterial->shader->set("transform", VP * modelMatrix);
+            skyMaterial->shader->set("transform", alwaysBehindTransform * VP * modelMatrix);
             //TODO: (Req 9) draw the sky sphere
             skySphere->draw();
             
