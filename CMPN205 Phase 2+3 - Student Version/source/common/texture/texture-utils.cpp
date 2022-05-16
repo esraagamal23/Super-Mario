@@ -8,6 +8,7 @@ our::Texture2D* our::texture_utils::empty(GLenum format, glm::ivec2 size){
     //TODO: (Req 10) Finish this function to create an empty texture with the given size and format
     texture->bind();
     glTexStorage2D(GL_TEXTURE_2D,1,format,size.x,size.y);
+
     return texture;
 }
 
@@ -35,9 +36,14 @@ our::Texture2D* our::texture_utils::loadImage(const std::string& filename, bool 
     //Bind the texture such that we upload the image data to its storage
     //TODO: (Req 4) Finish this function to fill the texture with the data found in "pixels" and generate the mipmaps if requested
     texture->bind();
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 4); // 4: tells opengl that each row starts every 4 bytes,VLIDE VALUES:1,2,4,8
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, size.x, size.y,0, GL_RGBA,
     GL_UNSIGNED_BYTE, pixels);
+    //0: miplevels
+    //GL_RGBA8: internal format
+    //size->x:width & y:height
+    //GL_RGBA: Format of data pointer
+    //GL_UNSIGNED_BYTE: Datatype of data pointer
     if(generate_mipmap)
     {
         glGenerateMipmap(GL_TEXTURE_2D);

@@ -41,7 +41,8 @@ namespace our {
         // This static method ensures that no texture is bound to GL_TEXTURE_2D
         static void unbind(){
             //TODO: (Req 4) Complete this function
-            glDisable(GL_TEXTURE_2D);
+            glBindTexture(GL_TEXTURE_2D,0);
+
         }
 
         Texture2D(const Texture2D&) = delete;

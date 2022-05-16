@@ -42,7 +42,9 @@ namespace our {
         void set(GLenum parameter, GLint value) const {
             //TODO: (Req 5) Complete this function
             glSamplerParameteri(name,parameter, value);
-
+             //name: sampler name
+            //parameter: ex->GL_TEXTURE_MAG_FILTER
+            //value: ex->GL_LINEAR
             
         }
 
@@ -51,6 +53,7 @@ namespace our {
         void set(GLenum parameter, GLfloat value) const {
             //TODO: (Req 5) Complete this function
             glSamplerParameterf(name,parameter, value);
+           
         }
 
         // This function sets a sampler paramter where the value is of type "GLfloat[4]"
