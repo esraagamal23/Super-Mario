@@ -55,21 +55,36 @@ namespace our {
             //TODO: (Req 10) Create a framebuffer
             glGenFramebuffers(1, &postprocessFrameBuffer);
             glBindFramebuffer(GL_DRAW_FRAMEBUFFER, postprocessFrameBuffer);
+            // GL_DRAW_FRAMEBUFFER: draw to buffer
+            // GL_READ_FRAMEBUFFER: read from buffer
+            // GL_FRAMEBUFFER: read or draw
+
+
             //TODO: (Req 10) Create a color and a depth texture and attach them to the framebuffer
+            
             // Hints: The color format can be (Red, Green, Blue and Alpha components with 8 bits for each channel).
             // The depth format can be (Depth component with 24 bits).
-            colorTarget = new our::Texture2D();      
-            colorTarget->bind();
-            int lvls = (int)glm::floor(glm::log2((float)glm::max(windowSize.x, windowSize.y))) + 1;
-            glTexStorage2D(GL_TEXTURE_2D, lvls, GL_RGBA8, windowSize.x, windowSize.y);        
+            // colorTarget = new our::Texture2D();      
+            // colorTarget->bind();
+            // int lvls = (int)glm::floor(glm::log2((float)glm::max(windowSize.x, windowSize.y))) + 1;
+            // glTexStorage2D(GL_TEXTURE_2D, lvls, GL_RGBA8, windowSize.x, windowSize.y);        
+            // glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,
+            // colorTarget->getOpenGLName(), 0);
+
+            // depthTarget = new our::Texture2D();      
+            // depthTarget->bind();
+            // glTexStorage2D(GL_TEXTURE_2D, 1, GL_DEPTH_COMPONENT24, windowSize.x, windowSize.y);        
+            // glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D,
+            // depthTarget->getOpenGLName(), 0);
+            
+            colorTarget=texture_utils::empty(GL_RGBA8, windowSize);
             glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,
             colorTarget->getOpenGLName(), 0);
-
-            depthTarget = new our::Texture2D();      
-            depthTarget->bind();
-            glTexStorage2D(GL_TEXTURE_2D, 1, GL_DEPTH_COMPONENT24, windowSize.x, windowSize.y);        
-            glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D,
+            
+            depthTarget=texture_utils::empty( GL_DEPTH_COMPONENT24, windowSize);
+            glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER,  GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D,
             depthTarget->getOpenGLName(), 0);
+
             //TODO: (Req 10) Unbind the framebuffer just to be safe
             glBindFramebuffer(GL_DRAW_FRAMEBUFFER,0);
             // Create a vertex array to use for drawing the texture
