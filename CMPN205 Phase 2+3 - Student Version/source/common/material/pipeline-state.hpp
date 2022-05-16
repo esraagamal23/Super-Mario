@@ -47,37 +47,39 @@ namespace our
         void setup() const
         {
             // TODO: (Req 3) Write this function
+            ///check depth testing
             if (depthTesting.enabled)
             {
-                glEnable(GL_DEPTH_TEST);
-                glDepthFunc(depthTesting.function);
+                glEnable(GL_DEPTH_TEST); ///enable depth
+                glDepthFunc(depthTesting.function); 
                 glDepthMask(depthMask);
-                glColorMask(colorMask[0], colorMask[1], colorMask[2], colorMask[3]);
+                glColorMask(colorMask[0], colorMask[1], colorMask[2], colorMask[3]);///give color mask rgb color
             }
             else
             {
 
-                glDisable(GL_DEPTH_TEST);
+                glDisable(GL_DEPTH_TEST); ///disable depth testing
 
             }
+            ///check face culling 
             if (faceCulling.enabled)
             {
-                glEnable(GL_CULL_FACE);
+                glEnable(GL_CULL_FACE); ///enable face culling
                 glCullFace(faceCulling.culledFace);
                 glFrontFace(faceCulling.frontFace);
             }
             else
             {
 
-                glDisable(GL_CULL_FACE);
+                glDisable(GL_CULL_FACE);///disable face culling
             }
-
-            if (blending.enabled)
+               ////check blending    
+            if (blending.enabled) 
             {
-                glEnable(GL_BLEND);
+                glEnable(GL_BLEND);///enable blending
                 glBlendFunc(blending.sourceFactor, blending.destinationFactor);
                  glBlendEquationSeparate(blending.equation,blending.equation);
-                 glBlendColor(blending.constantColor[0],blending.constantColor[1],blending.constantColor[2],blending.constantColor[3]);
+                 glBlendColor(blending.constantColor[0],blending.constantColor[1],blending.constantColor[2],blending.constantColor[3]);///give color mask rgb color
             }
             else
             {

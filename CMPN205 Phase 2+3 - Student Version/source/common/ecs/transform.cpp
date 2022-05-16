@@ -20,7 +20,7 @@ namespace our {
         //rotation matrix
          glm::mat4  Rotate = glm::mat4(1.0f);
        Rotate =glm::yawPitchRoll(rotation.y,rotation.x,rotation.z);
-         glm::mat4 transform =translate*Rotate* Scale; 
+         glm::mat4 transform =translate*Rotate* Scale;  ///transformation matrix
 
         return transform;
         
