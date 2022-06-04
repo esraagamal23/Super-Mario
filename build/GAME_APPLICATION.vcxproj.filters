@@ -58,6 +58,9 @@
     <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\collision-detection-system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\vendor\glad\src\gl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -187,6 +190,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\free-camera-controller.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\collision-detection-system.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\movement.hpp">
