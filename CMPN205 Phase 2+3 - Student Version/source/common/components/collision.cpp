@@ -19,7 +19,8 @@ namespace our {
         int maxZ = meshRenderer->mesh->maxZ;
         int minZ = meshRenderer->mesh->minZ;
         boundingBoxCenter = entity->getLocalToWorldMatrix() * glm::vec4(calculateCenter(minX, maxX, minY, maxY, minZ, maxZ), 1);
-        boundingBoxCenter = entity->getLocalToWorldMatrix() * glm::vec4(calculateHighestVertex(minX, maxX, minY, maxY, minZ, maxZ), 1);
+        highestBoundingBoxVertex = entity->getLocalToWorldMatrix() * glm::vec4(calculateHighestVertex(minX, maxX, minY, maxY, minZ, maxZ), 1);
+        radius = calculateRadius(boundingBoxCenter, highestBoundingBoxVertex);
     }
     glm::vec3 CollisionComponent::calculateCenter(int mnX, int mxX, int mnY, int mxY, int mnZ, int mxZ)
     {
@@ -35,6 +36,11 @@ namespace our {
         int maxY = glm::max(glm::abs(mnY), glm::abs(mxY));
         int maxZ = glm::max(glm::abs(mnZ), glm::abs(mxZ));
         return glm::vec3(maxX, maxY, maxZ);
+    }
+
+    float CollisionComponent::calculateRadius(glm::vec3 point1, glm::vec3 point2)
+    {
+        return glm::sqrt(glm::pow(point1[0] - point2[0], 2) + glm::pow(point1[1] - point2[1], 2) + glm::pow(point1[2] - point2[2], 2));
     }
 
     // Reads linearVelocity & angularVelocity from the given json object
