@@ -52,6 +52,9 @@
     <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\movement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -175,6 +178,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\component-deserializer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\collision.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.hpp">

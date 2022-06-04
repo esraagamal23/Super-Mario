@@ -17,6 +17,11 @@ namespace our {
         unsigned int VAO;
         // We need to remember the number of elements that will be draw by glDrawElements 
         GLsizei elementCount;
+        // save the max and min values for the vertices in order to use them to calculate the center of 
+        // the character or the bounding box
+        int minX, maxX;
+        int minY, maxY;
+        int minZ, maxZ;
     public:
 
         // The constructor takes two vectors:
@@ -28,6 +33,8 @@ namespace our {
         // a vertex array object to define how to read the vertex & element buffer during rendering 
         Mesh(const std::vector<Vertex>& vertices, const std::vector<unsigned int>& elements)
         {
+            // calculate the values of the mesh boundries
+            calculateMinMaxPoints(vertices);
             //TODO: (Req 1) Write this function
             
     
@@ -63,6 +70,40 @@ namespace our {
             // remember to store the number of elements in "elementCount" since you will need it for drawing
             // For the attribute locations, use the constants defined above: ATTRIB_LOC_POSITION, ATTRIB_LOC_COLOR, etc
             
+        }
+
+        /**
+         * This function calculates the min and max values x, y, z for the mesh 
+         * in order to use it in different aspects like boundry box, calculate the center, etc..
+         * @param vertices The vertices array
+         * @return void
+        */
+        void calculateMinMaxPoints(const std::vector<Vertex>& vertices)
+        {
+            minX = INT_MAX;
+            maxX = INT_MIN;
+            minY = INT_MAX;
+            maxY = INT_MIN;
+            minZ = INT_MAX;
+            maxZ = INT_MIN;
+            for(auto vertex : vertices)
+            {
+                glm::vec3 pos = vertex.position;
+                if(pos[0] > maxX)
+                maxX = pos[0];
+                else if(pos[0] < minX)
+                minX = pos[0];
+
+                if(pos[1] > maxY)
+                maxY = pos[1];
+                else if(pos[1] < minY)
+                minY = pos[1];
+
+                if(pos[2] > maxZ)
+                maxZ = pos[2];
+                else if(pos[2] < minZ)
+                minZ = pos[2];
+            }
         }
 
         // this function should render the mesh
