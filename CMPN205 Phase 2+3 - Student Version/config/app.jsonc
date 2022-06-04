@@ -32,12 +32,15 @@
                 "glass": "assets/textures/glass-panels.png",
                 "monkey": "assets/textures/monkey.png",
                 "kart1":"assets/textures/F2_Item_Kart_Mario_Body_S.png",
-                "kart2":"assets/textures/F2_Item_Kart_Mario_Kart_S.png",
-                "kart3":"assets/textures/F2_Item_Kart_Mario_Tire_NRM_S.png",
-                "kart4":"assets/textures/F2_Item_Kart_Mario_Tire_S.png",
+                //"kart2":"assets/textures/F2_Item_Kart_Mario_Kart_S.png",
+                //"kart3":"assets/textures/F2_Item_Kart_Mario_Tire_NRM_S.png",
+                //"kart4":"assets/textures/F2_Item_Kart_Mario_Tire_S.png",
                 "tree1":"assets/textures/textures.png",
                 "tree2":"assets/textures/kathryn-raccuglia-dirt-half-01.jpg",
-                "coin": "assets/textures/coin.jpg"
+                "coin": "assets/textures/coin.jpg",
+                "track": "assets/textures/istockphoto-1145253095-1024x1024.jpg",
+                "finish": "assets/textures/finish_Base_Color.png",
+                "peach":"assets/textures/F2_Item_Kart_Peach_Body_S.png"
             },
             "meshes":{
                 "cube": "assets/models/cube.obj",
@@ -45,13 +48,22 @@
                 "plane": "assets/models/plane.obj",
                 "sphere": "assets/models/sphere.obj",
                 "kart": "assets/models/F2_Item_Kart_Mario_S.obj",
+                "peach":"assets/models/F2_Item_Kart_Peach_S.obj",
                 "tree": "assets/models/Tree.obj",
-                "coin": "assets/models/coin.obj"
+                "coin": "assets/models/coin.obj",
+                "track": "assets/models/plane.obj",
+                "finish": "assets/models/finish_line.obj"
             },
             "samplers":{
                 "default":{},
                 "pixelated":{
                     "MAG_FILTER": "GL_NEAREST"
+                },
+                "wrapped":{
+                    "MAG_FILTER": "GL_LINEAR",
+                    "MIN_FILTER": "GL_LINEAR",
+                    "WRAP_S": "GL_REPEAT",
+                    "WRAP_T": "GL_REPEAT"
                 }
             },
             "materials":{
@@ -103,6 +115,36 @@
                     },
                     "tint": [1, 1, 1, 1],
                     "texture": "grass",
+                    "sampler": "wrapped"
+                },
+                "track":{
+                    "type": "textured",
+                    "shader": "textured",
+                    "pipelineState": {
+                        "faceCulling":{
+                            "enabled": false
+                        },
+                        "depthTesting":{
+                            "enabled": true
+                        }
+                    },
+                    "tint": [1, 1, 1, 1],
+                    "texture": "track",
+                    "sampler": "default"
+                },
+                "finish":{
+                    "type": "textured",
+                    "shader": "textured",
+                    "pipelineState": {
+                        "faceCulling":{
+                            "enabled": false
+                        },
+                        "depthTesting":{
+                            "enabled": true
+                        }
+                    },
+                    "tint": [1, 1, 1, 1],
+                    "texture": "finish",
                     "sampler": "default"
                 },
                 "monkey":{
@@ -148,6 +190,21 @@
                     },
                     "tint":[1,1,1,1],
                     "texture":"kart1",
+                    "sampler":"default"
+                },
+                "peach":{
+                    "type": "textured",
+                    "shader": "textured",
+                    "pipelineState":{
+                        "faceCulling":{
+                            "enabled":false
+                        },
+                        "depthTesting":{
+                            "enabled":true
+                        }
+                    },
+                    "tint":[1,1,1,1],
+                    "texture":"peach",
                     "sampler":"default"
                 },
                 "tree":{
@@ -205,7 +262,20 @@
                                 "material": "kart"
                             }
                         ]
-                     }//,
+                     },
+                     {
+                        "position": [0, -1, -2],
+                        "rotation": [0, 180, 0],
+                        "scale": [0.8, 0.8, 0.8],
+                        "components": [
+                            {
+                                "type": "Mesh Renderer",
+                                "mesh": "peach",
+                                "material": "peach"
+                            }
+                        ]
+                     }
+                     //,
                     // {
                     //     "position": [1, -1, -1],
                     //     "rotation": [45, 45, 0],
@@ -238,7 +308,7 @@
             {
                 "position": [0, -1, 0],
                 "rotation": [-90, 0, 0],
-                "scale": [10, 10, 1],
+                "scale": [50, 50, 1],
                 "components": [
                     {
                         "type": "Mesh Renderer",
@@ -247,6 +317,30 @@
                     }
                 ]
             },
+            {
+                "position": [0, -0.9, 0],
+                "rotation": [-90, 0, 0],
+                "scale": [3, 100, 1],
+                "components": [
+                    {
+                        "type": "Mesh Renderer",
+                        "mesh": "track",
+                        "material": "track"
+                    }
+                ]
+            },
+            // {
+            //     "position": [5, 5, 5],
+            //     "rotation": [0, 0, 0],
+            //     "scale": [100, 100, 100],
+            //     "components": [
+            //         {
+            //             "type": "Mesh Renderer",
+            //             "mesh": "finish",
+            //             "material": "finish"
+            //         }
+            //     ]
+            // },
             {
                 "position": [3, -1, 0],
                 "rotation": [0, 0, 0],
@@ -287,7 +381,7 @@
             //             "material": "glass"
             //         }
             //     ]
-            // },
+            // }//,
             // {
             //     "position": [0, 1, -2],
             //     "rotation": [0, 0, 0],
