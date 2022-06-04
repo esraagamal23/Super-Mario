@@ -14,10 +14,14 @@ namespace our {
     class CollisionComponent : public Component {
     public:
         glm::vec3 boundingBoxCenter = {0, 0, 0}; // Each frame, the entity should move as follows: position += linearVelocity * deltaTime 
-        float boundingBoxRadius = 0.0; // Each frame, the entity should rotate as follows: rotation += angularVelocity * deltaTime
+        glm::vec3 highestBoundingBoxVertex = {0, 0, 0}; // Each frame, the entity should rotate as follows: rotation += angularVelocity * deltaTime
 
         // constructor of the collision component
         CollisionComponent();
+        // Calculate center
+        glm::vec3 calculateCenter(int, int, int, int, int, int);
+        // Calculate radius
+        glm::vec3 calculateHighestVertex(int, int, int, int, int, int);
         // The ID of this component type is "Movement"
         static std::string getID() { return "Collision"; }
 
