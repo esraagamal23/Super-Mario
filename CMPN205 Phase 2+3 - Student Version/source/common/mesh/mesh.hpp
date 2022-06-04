@@ -13,8 +13,9 @@ namespace our {
     class Mesh {
         // Here, we store the object names of the 3 main components of a mesh:
         // A vertex array object, A vertex buffer and an element buffer
-        unsigned int VBO, EBO;
-        unsigned int VAO;
+        unsigned int VBO;/// Vertix buffer object
+         unsigned int EBO; /// Element buffer object
+        unsigned int VAO; ///vertex array object
         // We need to remember the number of elements that will be draw by glDrawElements 
         GLsizei elementCount;
         // save the max and min values for the vertices in order to use them to calculate the center of 
@@ -38,14 +39,17 @@ namespace our {
             //TODO: (Req 1) Write this function
             
     
-            elementCount = (GLsizei)elements.size(); //element size 
-            //Vertex array generate and bind
+            elementCount = (GLsizei)elements.size(); //elements size 
+            //Vertex array generate
               glGenVertexArrays(1, &VAO);
+              //Vertex array generate bind
               glBindVertexArray(VAO);
-             //vertex buffer generate and bind
+             //vertex buffer generate 
                glGenBuffers(1, &VBO);
+                //vertex buffer generate bind
                glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
+               ///reates a new data store for the buffer object currently bound to target
+                       
               glBufferData(GL_ARRAY_BUFFER, vertices.size()*sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
 
               //position location
@@ -61,7 +65,7 @@ namespace our {
                //Normal Location
                 glEnableVertexAttribArray(ATTRIB_LOC_NORMAL);	
                 glVertexAttribPointer(ATTRIB_LOC_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, normal));
-                // Element buffer
+                // Element buffer generate and bind
                glGenBuffers(1, &EBO);
                glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
                glBufferData(GL_ELEMENT_ARRAY_BUFFER, elementCount*sizeof(unsigned int), &elements[0], GL_STATIC_DRAW);
@@ -112,9 +116,9 @@ namespace our {
            
             //TODO: (Req 1) Write this function
           
-
+             ///bind vertex array       
             glBindVertexArray(VAO); 
-            
+            ///draw elements in screen 
            glDrawElements(GL_TRIANGLES,  elementCount, GL_UNSIGNED_INT, (void*)0);
               
         }
@@ -122,9 +126,9 @@ namespace our {
         // this function should delete the vertex & element buffers and the vertex array object
         ~Mesh(){
             //TODO: (Req 1) Write this function
-            glDeleteVertexArrays(1, &VAO);
-            glDeleteBuffers(1, &VBO);
-            glDeleteBuffers(1, &EBO);
+            glDeleteVertexArrays(1, &VAO); ///delete VAO
+            glDeleteBuffers(1, &VBO); ///delete VBO
+            glDeleteBuffers(1, &EBO); ///delete EBO
         }
 
         Mesh(Mesh const &) = delete;
