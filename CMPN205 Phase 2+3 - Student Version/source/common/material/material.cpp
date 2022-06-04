@@ -61,4 +61,30 @@ namespace our {
         sampler = AssetLoader<Sampler>::get(data.value("sampler", ""));
     }
 
+
+
+
+      void LitMaterial::setup() const {
+        
+        
+     
+        
+    }
+
+    // This function read the material data from a json object
+    void LitMaterial::deserialize(const nlohmann::json& data){
+        Material::deserialize(data);
+        if(!data.is_object()) return;
+        alphaThreshold = data.value("alphaThreshold", 0.0f);
+        texture = AssetLoader<Texture2D>::get(data.value("texture", ""));
+        sampler = AssetLoader<Sampler>::get(data.value("sampler", ""));
+            albedo=AssetLoader<Texture2D>::get(data.value("albedo", ""));
+            specular=AssetLoader<Texture2D>::get(data.value("specular", ""));
+            ambient_occlusion=AssetLoader<Texture2D>::get(data.value(" ambient_occlusion", ""));
+            roughness=AssetLoader<Texture2D>::get(data.value("roughness", ""));
+            emissive=AssetLoader<Texture2D>::get(data.value("emissive", ""));
+             
+       
+    }
+
 }

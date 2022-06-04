@@ -23,7 +23,15 @@
                 "textured":{
                     "vs":"assets/shaders/textured.vert",
                     "fs":"assets/shaders/textured.frag"
+                },
+                "lighting":
+                {
+                   "vs":"assets/shaders/Light.vert",
+                    "fs":"assets/shaders/Light.frag"  
+                  
+
                 }
+
             },
             "textures":{
                 "moon": "assets/textures/moon.jpg",
@@ -106,6 +114,15 @@
                             "enabled": true
                         }
                     },
+
+                  
+                  // " albedo":"",
+                    //"specular":"",
+                  //" ambient_occlusion":"",
+                   //"roughness":"",
+                   //"emissive":"",
+                    
+                    
                     "tint": [1, 1, 1, 1],
                     "texture": "monkey",
                     "sampler": "default"
@@ -139,7 +156,7 @@
                     }
                 ],
                 "children": [
-                    {
+                   /* {
                         "position": [1, -1, -1],
                         "rotation": [45, 45, 0],
                         "scale": [0.1, 0.1, 1.0],
@@ -150,12 +167,13 @@
                                 "material": "metal"
                             }
                         ]
-                    }
+                    }*/
                 ]
             },
-            {
+            {     "position":[0,-1,0], 
+                  "scale":[5,5,5], 
                 "rotation": [-45, 0, 0],
-                "components": [
+                 "components": [
                     {
                         "type": "Mesh Renderer",
                         "mesh": "monkey",
@@ -163,12 +181,19 @@
                     },
                     {
                         "type": "Movement",
-                        "linearVelocity": [0, 0.1, 0],
+                        "linearVelocity": [0, 0, 0],
                         "angularVelocity": [0, 45, 0]
+                    },
+                    {
+                        "type": "lighting",
+                        "type_light":1,
+                         "color":[1,0,0],
+                         " cone_angles":[1,0.9,0.7]
+                         
                     }
                 ]
-            },
-            {
+            }
+            /*{
                 "position": [0, -1, 0],
                 "rotation": [-90, 0, 0],
                 "scale": [10, 10, 1],
@@ -179,8 +204,9 @@
                         "material": "grass"
                     }
                 ]
-            },
-            {
+            }*/
+
+           /* {
                 "position": [0, 1, 2],
                 "rotation": [0, 0, 0],
                 "scale": [2, 2, 2],
@@ -239,8 +265,8 @@
                         "material": "glass"
                     }
                 ]
-            },
-            {
+            },*/
+           /* {
                 "position": [0, 10, 0],
                 "rotation": [45, 45, 0],
                 "scale": [5, 5, 5],
@@ -255,7 +281,8 @@
                         "angularVelocity": [0, 90, 0]
                     }
                 ]
-            }
+            }*/
+            
         ]
     }
 }

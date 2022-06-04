@@ -5,6 +5,7 @@
 #include "../texture/sampler.hpp"
 #include "../shader/shader.hpp"
 
+
 #include <glm/vec4.hpp>
 #include <json/json.hpp>
 
@@ -53,13 +54,38 @@ namespace our {
         void deserialize(const nlohmann::json& data) override;
     };
 
+ //////esraa add
+class LitMaterial :public TexturedMaterial
+{
+ 
+   Texture2D* albedo;
+    Texture2D* specular;
+    Texture2D* ambient_occlusion;
+    Texture2D*roughness;
+    Texture2D* emissive;
+        Texture2D* texture;
+        Sampler* sampler;
+        float alphaThreshold;
+
+    void setup() const override;
+    void deserialize(const nlohmann::json& data) override;
+
+
+
+};
     // This function returns a new material instance based on the given type
     inline Material* createMaterialFromType(const std::string& type){
         if(type == "tinted"){
             return new TintedMaterial();
         } else if(type == "textured"){
             return new TexturedMaterial();
-        } else {
+        }else if(type == "lighting")
+        {
+
+               return new LitMaterial();
+        } 
+        
+        else {
             return new Material();
         }
     }
