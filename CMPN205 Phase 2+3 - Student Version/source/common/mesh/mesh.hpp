@@ -18,13 +18,13 @@ namespace our {
         unsigned int VAO; ///vertex array object
         // We need to remember the number of elements that will be draw by glDrawElements 
         GLsizei elementCount;
+    public:
+
         // save the max and min values for the vertices in order to use them to calculate the center of 
         // the character or the bounding box
         int minX, maxX;
         int minY, maxY;
         int minZ, maxZ;
-    public:
-
         // The constructor takes two vectors:
         // - vertices which contain the vertex data.
         // - elements which contain the indices of the vertices out of which each rectangle will be constructed.
