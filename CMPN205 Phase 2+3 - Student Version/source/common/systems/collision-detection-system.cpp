@@ -62,7 +62,7 @@ namespace our{
 
         float distance = comp1->calculateRadius(comp1Center, comp2Center);
         float radius_sum = comp1Radius + comp2Radius;
-        return distance < radius_sum ;
+        return distance < radius_sum / 2 ;
     }
 
     void collisionDetectionSystem::preventCollision(CollisionComponent* player, CollisionComponent* comp)

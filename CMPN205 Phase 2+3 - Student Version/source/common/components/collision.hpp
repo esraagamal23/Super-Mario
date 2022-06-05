@@ -7,27 +7,37 @@
 
 namespace our {
 
-    // This component denotes that the MovementSystem will move the owning entity by a certain linear and angular velocity.
-    // This component is added as a simple example for how use the ECS framework to implement logic.
-    // For more information, see "common/systems/movement.hpp"
-    // For a more complex example of how to use the ECS framework, see "free-camera-controller.hpp"
+    /**
+     * Collision component is responsible for add the collision property its entity
+     * and it's based on the bounding box surrounding the entity, and use it to detect if it collides or not
+     * here we use bounding ball and store its center and farest point of the shape and use them 
+     * to form the ball
+    */
     class CollisionComponent : public Component {
     public:
-        glm::vec3 boundingBoxCenter = {0, 0, 0}; // Each frame, the entity should move as follows: position += linearVelocity * deltaTime 
-        glm::vec3 highestBoundingBoxVertex = {0, 0, 0}; // Each frame, the entity should rotate as follows: rotation += angularVelocity * deltaTime
+        glm::vec3 boundingBoxCenter = {0, 0, 0}; 
+        glm::vec3 highestBoundingBoxVertex = {0, 0, 0};
         float radius = 0.0;
-        // initilize the component with its center and radius
+        //initilize the component with its center and radius
         void init();
-        // Calculate center
+        /**
+         * Calculate the center of the ball using the min, max x, y, z for 
+         * the shape by calculating their average
+         * @param minX
+         * @param maxX
+         * @param minY
+         * @param maxY
+         * @param minZ
+         * @param maxZ
+        */
         glm::vec3 calculateCenter(float, float, float, float, float, float);
-        // Calculate HighestVertex
+        // Calculate HighestVertex by getting max point in the shape
         glm::vec3 calculateHighestVertex(float, float, float, float, float, float);
         // Calculate Radius
         float calculateRadius(glm::vec3, glm::vec3);
-        // The ID of this component type is "Movement"
+        // The ID of this component type is "Collision"
         static std::string getID() { return "Collision"; }
-
-        // Reads linearVelocity & angularVelocity from the given json object
+        // Reads ball center & highest point from the given json object
         void deserialize(const nlohmann::json& data) override;
     };
 
