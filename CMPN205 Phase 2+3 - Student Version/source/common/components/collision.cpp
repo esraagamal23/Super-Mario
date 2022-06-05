@@ -23,7 +23,6 @@ namespace our {
         float minZ = meshRenderer->mesh->minZ;
         boundingBoxCenter = glm::vec4(calculateCenter(minX, maxX, minY, maxY, minZ, maxZ), 1);
         highestBoundingBoxVertex = glm::vec4(calculateHighestVertex(minX, maxX, minY, maxY, minZ, maxZ), 1);
-        radius = calculateRadius(boundingBoxCenter, highestBoundingBoxVertex);
     }
 
     glm::vec3 CollisionComponent::calculateCenter(float mnX, float mxX, float mnY, float mxY, float mnZ, float mxZ)

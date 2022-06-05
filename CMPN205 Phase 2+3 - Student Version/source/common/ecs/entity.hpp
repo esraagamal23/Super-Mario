@@ -9,6 +9,7 @@
 
 namespace our {
 
+    class Component;
     class World; // A forward declaration of the World Class
 
     class Entity{
