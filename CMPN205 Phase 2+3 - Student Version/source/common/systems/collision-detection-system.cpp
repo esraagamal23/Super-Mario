@@ -40,6 +40,7 @@ namespace our{
                     if(isCollidable(playerCollision, comp))
                     {
                         std::cout << "collision...." << std::endl;
+                        preventCollision(playerCollision, comp);
                     }
                 }
             }
@@ -64,30 +65,15 @@ namespace our{
         return distance < radius_sum / 2;
     }
 
-    void collisionDetectionSystem::preventCollision(CollisionComponent* comp1, CollisionComponent* comp2)
+    void collisionDetectionSystem::preventCollision(CollisionComponent* player, CollisionComponent* comp)
     {
-        Entity* owner1 = comp1->getOwner();
-        Entity* owner2 = comp2->getOwner();
-        glm::vec3 comp1Center = owner1->getLocalToWorldMatrix() * glm::vec4(comp1->boundingBoxCenter, 1);
-        glm::vec3 comp2Center = owner2->getLocalToWorldMatrix() * glm::vec4(comp2->boundingBoxCenter, 1);
-        FreeCameraControllerComponent* ent1 = owner1->getComponent<FreeCameraControllerComponent>();
-        FreeCameraControllerComponent* ent2 = owner2->getComponent<FreeCameraControllerComponent>();
-        if(ent1)
+        Entity* owner1 = player->getOwner();
+        Entity* owner2 = comp->getOwner();
+        if(owner2)
         {
-            glm::vec3 preventDirection = comp2Center - comp1Center;
-            preventDirection[0] = preventDirection[0] > 0 ? 1 : preventDirection[0] == 0 ? 0 : -1;
-            preventDirection[1] = preventDirection[1] > 0 ? 1 : preventDirection[1] == 0 ? 0 : -1;
-            preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
-            owner1->localTransform.position += preventDirection * ent1->positionSensitivity;
+            owner2->localTransform.scale = glm::vec3(0, 0, 0);
         }
-        if(ent2)
-        {
-            glm::vec3 preventDirection = comp1Center - comp2Center;
-            preventDirection[0] = preventDirection[0] > 0 ? 1 : preventDirection[0] == 0 ? 0 : -1;
-            preventDirection[1] = preventDirection[1] > 0 ? 1 : preventDirection[1] == 0 ? 0 : -1;
-            preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
-            owner2->localTransform.position += preventDirection * ent2->positionSensitivity;
-        }
+        
     }
 
     void collisionDetectionSystem::exit()

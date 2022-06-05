@@ -192,6 +192,9 @@
                         "type": "Mesh Renderer",
                         "mesh": "plane",
                         "material": "glass"
+                    },
+                    {
+                        "type": "Collision"
                     }
                 ]
             },
