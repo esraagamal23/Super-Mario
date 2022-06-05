@@ -148,6 +148,9 @@
                                 "type": "Mesh Renderer",
                                 "mesh": "cube",
                                 "material": "metal"
+                            },
+                            {
+                                "type": "Collision"
                             }
                         ]
                     }
@@ -253,6 +256,9 @@
                     {
                         "type": "Movement",
                         "angularVelocity": [0, 90, 0]
+                    },
+                    {
+                        "type": "Collision"
                     }
                 ]
             }
