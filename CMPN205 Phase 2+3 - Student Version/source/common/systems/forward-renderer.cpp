@@ -281,7 +281,7 @@ command.material->shader->set("lights["+std::to_string(i)+"].direction",lightCom
 command.material->shader->set("lights["+std::to_string(i)+"].type",lightCommands[i].type_light);
 command.material->shader->set("lights["+std::to_string(i)+"].diffuse",lightCommands[i].diffuse);
 command.material->shader->set("lights["+std::to_string(i)+"].specular",lightCommands[i].specular);
-//command.material->shader->set("lights["+std::to_string(i)+"].color",lightCommands[i].color);
+command.material->shader->set("lights["+std::to_string(i)+"].color",lightCommands[i].color);
 command.material->shader->set("lights["+std::to_string(i)+"].attenuation",lightCommands[i].attenuation);
 command.material->shader->set("lights["+std::to_string(i)+"].cone_angles",(glm::radians(lightCommands[i].cone_angles[0]), glm::radians(lightCommands[i].cone_angles[1])));
 
@@ -300,7 +300,7 @@ command.material->shader->set("lights["+std::to_string(i)+"].cone_angles",(glm::
 
             }
             command.material->setup();
-            //command.material->shader->set("transform", VP * command.localToWorld);
+            command.material->shader->set("transform", VP * command.localToWorld);
             command.mesh->draw();
         }
         

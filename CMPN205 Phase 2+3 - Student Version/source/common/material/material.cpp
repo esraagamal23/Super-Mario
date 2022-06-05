@@ -66,32 +66,32 @@ namespace our {
 
       void LitMaterial::setup() const {
 
-          Material::setup();
+          Material::setup(); //material setup
            
           glActiveTexture(GL_TEXTURE0);
           albedo->bind();
           sampler->bind(0);
-          shader->set("albedo",0);
+          shader->set("material.albedo",0);
 
          glActiveTexture(GL_TEXTURE1);
          specular->bind();
          sampler->bind(1);
-         shader->set("specular",1);
+         shader->set("material.specular",1);
 
          glActiveTexture(GL_TEXTURE2);
          ambient_occlusion->bind();
          sampler->bind(2);
-         shader->set("ambient_occlusion",2);
+         shader->set("material.ambient_occlusion",2);
          
         glActiveTexture(GL_TEXTURE3);
         roughness->bind();
         sampler->bind(3);
-        shader->set("roughness",3);
+        shader->set("material.roughness",3);
 
         glActiveTexture(GL_TEXTURE4);
         emissive->bind(); 
         sampler->bind(4);
-        shader->set("emissive",4);
+        shader->set("material.emissive",4);
 
          
        
@@ -110,20 +110,31 @@ namespace our {
  
              
             if(data.contains("albedo"))
+           { 
              albedo=AssetLoader<Texture2D>::get(data.value("albedo", ""));
-                   
+           }       
             
             
              if(data.contains("specular"))
-            specular=AssetLoader<Texture2D>::get(data.value("specular", ""));
+            {specular=AssetLoader<Texture2D>::get(data.value("specular", ""));
             
+            }
              if(data.contains("ambient_occlusion"))
-            ambient_occlusion=AssetLoader<Texture2D>::get(data.value("ambient_occlusion", ""));
+           
+           {
+                ambient_occlusion=AssetLoader<Texture2D>::get(data.value("ambient_occlusion", ""));
+           
+           }
             if(data.contains("roughness"))
-            roughness=AssetLoader<Texture2D>::get(data.value("roughness", ""));
+          {
+                roughness=AssetLoader<Texture2D>::get(data.value("roughness", ""));
+                std::cout<<"roughness\n";
+          }
              if(data.contains("emissive"))
-            emissive=AssetLoader<Texture2D>::get(data.value("emissive", ""));
-             
+            {
+               
+                emissive=AssetLoader<Texture2D>::get(data.value("emissive", ""));
+            }
            sampler = AssetLoader<Sampler>::get(data.value("sampler", ""));
       }
 
