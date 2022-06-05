@@ -22,9 +22,9 @@ namespace our {
 
         // save the max and min values for the vertices in order to use them to calculate the center of 
         // the character or the bounding box
-        int minX, maxX;
-        int minY, maxY;
-        int minZ, maxZ;
+        float minX, maxX;
+        float minY, maxY;
+        float minZ, maxZ;
         // The constructor takes two vectors:
         // - vertices which contain the vertex data.
         // - elements which contain the indices of the vertices out of which each rectangle will be constructed.
@@ -84,12 +84,12 @@ namespace our {
         */
         void calculateMinMaxPoints(const std::vector<Vertex>& vertices)
         {
-            minX = INT_MAX;
-            maxX = INT_MIN;
-            minY = INT_MAX;
-            maxY = INT_MIN;
-            minZ = INT_MAX;
-            maxZ = INT_MIN;
+            minX = FLT_MAX;
+            maxX = FLT_MIN;
+            minY = FLT_MAX;
+            maxY = FLT_MIN;
+            minZ = FLT_MAX;
+            maxZ = FLT_MIN;
             for(auto vertex : vertices)
             {
                 glm::vec3 pos = vertex.position;

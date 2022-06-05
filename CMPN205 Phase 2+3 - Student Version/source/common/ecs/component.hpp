@@ -2,6 +2,7 @@
 
 #include <json/json.hpp>
 #include <string>
+#include "entity.hpp"
 
 namespace our {
 
@@ -24,6 +25,12 @@ namespace our {
         virtual void deserialize(const nlohmann::json& data) = 0;
         // Returns the owner of this component
         Entity* getOwner() const { return owner; }
+        // Returns the root entity of this component
+        Entity* getRootOwner(Entity* ent)
+        {
+            if(!(ent->parent)) return ent;
+            getRootOwner(ent);
+        }
         // Define a virtual destructor
         virtual ~Component(){}
     };

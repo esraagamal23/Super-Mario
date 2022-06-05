@@ -9,41 +9,41 @@ namespace our{
 
     void collisionDetectionSystem::update(World* world, float deltaTime)
     {
-        CollisionComponent* player_collision = nullptr;
-        for(auto entity : world->getEntities()){
-                FreeCameraControllerComponent* player = entity->getComponent<FreeCameraControllerComponent>();
-                if(player)
-                {
-                    player_collision = entity->getComponent<CollisionComponent>();
-                    break;
-                }
-            }
-        if(player_collision)
+        CollisionComponent* comp1 = nullptr;
+        CollisionComponent* comp2 = nullptr;
+        auto entities = world->getEntities();
+        for(auto entity1 = entities.begin(); entity1 != entities.end(); entity1++)
         {
-            for(auto entity : world->getEntities())
+            for(auto entity2 = entity1++; entity2 != entities.end(); entity2++)
             {
-                CollisionComponent * component = entity->getComponent<CollisionComponent>();
-                FreeCameraControllerComponent * player = entity->getComponent<FreeCameraControllerComponent>();
-                if(component && !player && isCollidable(component, player_collision))
+                comp1 = (*entity1)->getComponent<CollisionComponent>();
+                comp2 = (*entity2)->getComponent<CollisionComponent>();
+                if(comp1 && comp2 && comp1 != comp2)
                 {
-                    preventCollision(player_collision, component);
+                    comp1->init();
+                    comp2->init();
+                    if(isCollidable(comp1, comp2))
+                    {
+                        std::cout << "collision" << std::endl;
+                        preventCollision(comp1, comp2);
+                    }
+                    
                 }
-
             }
-        }
-        else
-        {
-            std::cerr << "There is no player in the game" << std::endl;
         }
         
     }
 
     bool collisionDetectionSystem::isCollidable(CollisionComponent* comp1, CollisionComponent* comp2)
     {
-        glm::vec3 comp1Center = comp1->boundingBoxCenter;
-        float comp1Radius = comp1->radius;
-        glm::vec3 comp2Center = comp2->boundingBoxCenter;
-        float comp2Radius = comp2->radius;
+        Entity* ent1 = comp1->getOwner();
+        Entity* ent2 = comp2->getOwner();
+        glm::vec3 comp1Center = ent1->getLocalToWorldMatrix() * glm::vec4(comp1->boundingBoxCenter, 1);
+        glm::vec3 comp2Center = ent2->getLocalToWorldMatrix() * glm::vec4(comp2->boundingBoxCenter, 1);
+        glm::vec3 comp1Highest = ent1->getLocalToWorldMatrix() * glm::vec4(comp1->highestBoundingBoxVertex, 1);
+        glm::vec3 comp2Highest = ent2->getLocalToWorldMatrix() * glm::vec4(comp2->highestBoundingBoxVertex, 1);
+        float comp1Radius = comp1->calculateRadius(comp1Center, comp1Highest);
+        float comp2Radius = comp2->calculateRadius(comp2Center, comp2Highest);
 
         float distance = comp1->calculateRadius(comp1Center, comp2Center);
         float radius_sum = comp1Radius + comp2Radius;
@@ -52,11 +52,33 @@ namespace our{
 
     void collisionDetectionSystem::preventCollision(CollisionComponent* comp1, CollisionComponent* comp2)
     {
-        glm::vec3 preventDirection = comp2->boundingBoxCenter - comp1->boundingBoxCenter;
-        preventDirection[0] = preventDirection[0] > 0 ? 1 : preventDirection[0] == 0 ? 0 : -1;
-        preventDirection[1] = preventDirection[1] > 0 ? 1 : preventDirection[1] == 0 ? 0 : -1;
-        preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
-        comp1->getOwner()->localTransform.position += preventDirection;
+        Entity* owner1 = comp1->getRootOwner(comp1->getOwner());
+        Entity* owner2 = comp2->getRootOwner(comp2->getOwner());
+        glm::vec3 comp1Center = owner1->getLocalToWorldMatrix() * glm::vec4(comp1->boundingBoxCenter, 1);
+        glm::vec3 comp2Center = owner2->getLocalToWorldMatrix() * glm::vec4(comp2->boundingBoxCenter, 1);
+        FreeCameraControllerComponent* ent1 = owner1->getComponent<FreeCameraControllerComponent>();
+        FreeCameraControllerComponent* ent2 = owner2->getComponent<FreeCameraControllerComponent>();
+        if(ent1)
+        {
+            glm::vec3 preventDirection = comp2Center - comp1Center;
+            preventDirection[0] = preventDirection[0] > 0 ? 1 : preventDirection[0] == 0 ? 0 : -1;
+            preventDirection[1] = preventDirection[1] > 0 ? 1 : preventDirection[1] == 0 ? 0 : -1;
+            preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
+            owner1->localTransform.position += preventDirection * ent1->positionSensitivity;
+        }
+        if(ent2)
+        {
+            glm::vec3 preventDirection = comp1Center - comp2Center;
+            preventDirection[0] = preventDirection[0] > 0 ? 1 : preventDirection[0] == 0 ? 0 : -1;
+            preventDirection[1] = preventDirection[1] > 0 ? 1 : preventDirection[1] == 0 ? 0 : -1;
+            preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
+            owner2->localTransform.position += preventDirection * ent2->positionSensitivity;
+        }
+        // glm::vec3 preventDirection = comp2->boundingBoxCenter - comp1->boundingBoxCenter;
+        // preventDirection[0] = preventDirection[0] > 0 ? 1 : preventDirection[0] == 0 ? 0 : -1;
+        // preventDirection[1] = preventDirection[1] > 0 ? 1 : preventDirection[1] == 0 ? 0 : -1;
+        // preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
+        // owner->localTransform.position = owner->localTransform.toMat4() * glm::vec4(preventDirection, 1.0);
     }
 
     void collisionDetectionSystem::exit()

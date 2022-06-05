@@ -3,7 +3,7 @@
 #include "../ecs/world.hpp"
 #include "../components/camera.hpp"
 #include "../components/free-camera-controller.hpp"
-
+#include "../components/collision.hpp"
 #include "../application.hpp"
 
 #include <glm/glm.hpp>
