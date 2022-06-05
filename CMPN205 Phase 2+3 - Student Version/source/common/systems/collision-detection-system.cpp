@@ -82,7 +82,6 @@ namespace our{
                 }
             }
         }
-        std::cout<<"stop------------------------------------";
         if(owner2)
         {
             owner2->localTransform.position = glm::vec3(FLT_MAX, FLT_MAX, FLT_MAX);
