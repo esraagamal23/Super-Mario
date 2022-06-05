@@ -69,7 +69,7 @@ void main(){
         Light light = lights[i];
 
         vec3 direction_to_light = -light.direction;
-        if(light.type != 0){
+        if(light.type != DIRECTIONAL){
             direction_to_light = normalize(light.position - fs_in.world);
         }
         
@@ -80,10 +80,10 @@ void main(){
         vec3 specular = light.specular * material_specular * pow(max(0, dot(view, reflected)), material_shininess);
 
         float attenuation = 1;
-        if(light.type != 0){
+        if(light.type != DIRECTIONAL){
             float d = distance(light.position, fs_in.world);
             attenuation /= dot(light.attenuation, vec3(d*d, d, 1));
-            if(light.type == 2){
+            if(light.type == SPOT){
                 float angle = acos(dot(-direction_to_light, light.direction));
                 attenuation *= smoothstep(light.cone_angles.y, light.cone_angles.x, angle);
             }

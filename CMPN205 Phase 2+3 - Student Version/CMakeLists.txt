@@ -78,7 +78,8 @@ set(COMMON_SOURCES
         source/common/components/movement.hpp
         source/common/components/movement.cpp
         source/common/components/component-deserializer.hpp
-
+        source/common/components/lightning.cpp 
+        source/common/components/lightning.hpp 
         source/common/systems/forward-renderer.hpp
         source/common/systems/forward-renderer.cpp
         source/common/systems/free-camera-controller.hpp

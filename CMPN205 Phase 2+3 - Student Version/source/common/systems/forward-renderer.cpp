@@ -242,10 +242,21 @@ namespace our {
         // Get the location of the transform uniform
         for(auto command : opaqueCommands)
         {      
-            std::cout<<lightCommands.size();
+           
             if(!lightCommands.empty())
             {
-                
+              
+         float angle = (float)glfwGetTime();
+
+        glm::vec3 eye = glm::vec3(2*glm::sin(angle), 1, 2*glm::cos(angle)); //glm::vec3(0, 0, 2); //
+
+       command.material->shader->set("eye",eye);
+ 
+        command.material->shader->set("M", command.localToWorld);
+       
+        command.material->shader->set("VP", VP);
+ 
+        command.material->shader->set("M_IT", glm::transpose(glm::inverse( command.localToWorld)));
 
            ShaderProgram *lightShader= command.material->shader;
            int light_size=lightCommands.size();
@@ -254,41 +265,42 @@ namespace our {
 
 
             { 
-             
-lightShader->set("lights["+std::to_string(i)+"].position",lightCommands[i].position);               
-lightShader->set("lights["+std::to_string(i)+"]. direction",lightCommands[i].direction);               
-lightShader->set("lights["+std::to_string(i)+"]. type_light",lightCommands[i].type_light);
-lightShader->set("lights["+std::to_string(i)+"]. diffuse",lightCommands[i].diffuse);
-lightShader->set("lights["+std::to_string(i)+"]. specular",lightCommands[i].specular);
-//lightShader->set("lights["+std::to_string(i)+"]. color",lightCommands[i].color);
-lightShader->set("lights["+std::to_string(i)+"]. attenuation",lightCommands[i].attenuation);
-lightShader->set("lights["+std::to_string(i)+"]. cons_angles",(glm::radians(lightCommands[i].cone_angles[0]), glm::radians(lightCommands[i].cone_angles[1])));
+                  std::cout<<lightCommands[i].type_light<<"\n";
+                  std::cout<<lightCommands[i].position[0]<<lightCommands[i].position[1]<<lightCommands[i].position[2]<<"\n";
+                  std::cout<<lightCommands[i].direction[0]<<"   "<<lightCommands[i].direction[1]<<lightCommands[i].direction[2]<<"\n";
+                  std::cout<<lightCommands[i].diffuse[0]<<lightCommands[i].diffuse[1]<<lightCommands[i].diffuse[2]<<"\n";
+                  std::cout<<lightCommands[i].specular[0]<<lightCommands[i].specular[1]<<lightCommands[i].specular[2]<<"\n";
+                  std::cout<<lightCommands[i].color[0]<<lightCommands[i].color[1]<<lightCommands[i].color[2]<<"\n";
+                  std::cout<<lightCommands[i].attenuation[0]<<lightCommands[i].attenuation[1]<<lightCommands[i].attenuation[2]<<"\n";
+                
+                  std::cout<<lightCommands[i].cone_angles[0]<<"      "<<lightCommands[i].cone_angles[1]<<"\n";
+                  
+                  
+command.material->shader->set("lights["+std::to_string(i)+"].position",lightCommands[i].position);               
+command.material->shader->set("lights["+std::to_string(i)+"].direction",lightCommands[i].direction);               
+command.material->shader->set("lights["+std::to_string(i)+"].type",lightCommands[i].type_light);
+command.material->shader->set("lights["+std::to_string(i)+"].diffuse",lightCommands[i].diffuse);
+command.material->shader->set("lights["+std::to_string(i)+"].specular",lightCommands[i].specular);
+//command.material->shader->set("lights["+std::to_string(i)+"].color",lightCommands[i].color);
+command.material->shader->set("lights["+std::to_string(i)+"].attenuation",lightCommands[i].attenuation);
+command.material->shader->set("lights["+std::to_string(i)+"].cone_angles",(glm::radians(lightCommands[i].cone_angles[0]), glm::radians(lightCommands[i].cone_angles[1])));
 
 
 
 
 
             }
-            float angle = (float)glfwGetTime();
+        
+        command.material->shader->set ("sky.top",{ 0.3, 0.6, 1.0});
+        command.material->shader->set( "sky.middle",{ 0.3, 0.3, 0.3});
+        command.material->shader->set("sky.bottom",{ 0.1, 0.1, 0.0});
 
-        glm::vec3 eye = glm::vec3(2*glm::sin(angle), 1, 2*glm::cos(angle)); //glm::vec3(0, 0, 2); //
-
-      lightShader->set("eye",eye);
-
-            lightShader->set("sky.top",{ 0.3, 0.6, 1.0});
-             lightShader->set("sky.middle",{ 0.3, 0.3, 0.3});
-              lightShader->set("sky.bottom",{ 0.1, 0.1, 0.0});
-
-           
+         
         
 
-        lightShader->set("M", command.localToWorld);
-           lightShader->set("VP", VP);
- 
-            lightShader->set("M_IT", glm::transpose(glm::inverse( command.localToWorld)));
             }
             command.material->setup();
-           // command.material->shader->set("transform", VP * command.localToWorld);
+            //command.material->shader->set("transform", VP * command.localToWorld);
             command.mesh->draw();
         }
         

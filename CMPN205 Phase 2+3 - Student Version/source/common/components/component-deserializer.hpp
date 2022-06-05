@@ -6,7 +6,7 @@
 #include "free-camera-controller.hpp"
 #include "movement.hpp"
 #include "lightning.hpp"
-
+#include<iostream>
 namespace our {
 
     // Given a json object, this function picks and creates a component in the given entity
@@ -16,9 +16,13 @@ namespace our {
         Component* component = nullptr;
         if(type == CameraComponent::getID()){
             component = entity->addComponent<CameraComponent>();
-        }else if(type == LightningComponent::getID())
+        }
+        
+        else if(type == LightningComponent::getID())
 
         {
+
+           
           component=entity->addComponent<LightningComponent>();
 
         } 

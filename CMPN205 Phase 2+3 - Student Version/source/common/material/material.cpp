@@ -67,7 +67,7 @@ namespace our {
       void LitMaterial::setup() const {
 
           Material::setup();
-
+           
           glActiveTexture(GL_TEXTURE0);
           albedo->bind();
           sampler->bind(0);
@@ -93,7 +93,7 @@ namespace our {
         sampler->bind(4);
         shader->set("emissive",4);
 
-          
+         
        
         
          
@@ -110,9 +110,9 @@ namespace our {
  
              
             if(data.contains("albedo"))
-            { albedo=AssetLoader<Texture2D>::get(data.value("albedo", ""));
+             albedo=AssetLoader<Texture2D>::get(data.value("albedo", ""));
                    
-            }
+            
             
              if(data.contains("specular"))
             specular=AssetLoader<Texture2D>::get(data.value("specular", ""));
@@ -125,7 +125,6 @@ namespace our {
             emissive=AssetLoader<Texture2D>::get(data.value("emissive", ""));
              
            sampler = AssetLoader<Sampler>::get(data.value("sampler", ""));
-        
-    }
+      }
 
 }

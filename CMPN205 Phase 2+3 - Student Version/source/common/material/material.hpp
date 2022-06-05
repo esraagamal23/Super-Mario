@@ -57,7 +57,7 @@ namespace our {
  //////esraa add
 class LitMaterial :public Material
 {
- 
+    
    Texture2D* albedo;
     Texture2D* specular;
     Texture2D* ambient_occlusion;
