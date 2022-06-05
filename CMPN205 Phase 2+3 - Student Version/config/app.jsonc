@@ -129,7 +129,7 @@
                 "roughness":"roughness",
                 "emissive":"emissive",
                     //"specular":"specular",
-                    //"tint": [1, 1, 1, 1],
+                "tint": [1, 1, 1, 1],
                     //"texture": "monkey",
                   "sampler": "default"
                 },
@@ -218,11 +218,11 @@
                     },
                      {
                         "type": "lighting",
-                        "type_light":1,
-                         "color":[1,1,1,1],
+                        "type_light":2,
+                         //"color":[1,1,1,1],
                          "cone_angles":[10.0,11.0],
-                         "diffuse":[1,0.2,0.1],
-                         "specular":[1,0.2,0.1],
+                         "diffuse":[1,0.9,0.7],
+                         "specular":[1,0.9,0.7],
                          "attenuation":[1,0,0]
                          
                     }
