@@ -52,8 +52,8 @@ namespace our{
 
     void collisionDetectionSystem::preventCollision(CollisionComponent* comp1, CollisionComponent* comp2)
     {
-        Entity* owner1 = comp1->getRootOwner(comp1->getOwner());
-        Entity* owner2 = comp2->getRootOwner(comp2->getOwner());
+        Entity* owner1 = comp1->getOwner();
+        Entity* owner2 = comp2->getOwner();
         glm::vec3 comp1Center = owner1->getLocalToWorldMatrix() * glm::vec4(comp1->boundingBoxCenter, 1);
         glm::vec3 comp2Center = owner2->getLocalToWorldMatrix() * glm::vec4(comp2->boundingBoxCenter, 1);
         FreeCameraControllerComponent* ent1 = owner1->getComponent<FreeCameraControllerComponent>();
@@ -74,11 +74,6 @@ namespace our{
             preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
             owner2->localTransform.position += preventDirection * ent2->positionSensitivity;
         }
-        // glm::vec3 preventDirection = comp2->boundingBoxCenter - comp1->boundingBoxCenter;
-        // preventDirection[0] = preventDirection[0] > 0 ? 1 : preventDirection[0] == 0 ? 0 : -1;
-        // preventDirection[1] = preventDirection[1] > 0 ? 1 : preventDirection[1] == 0 ? 0 : -1;
-        // preventDirection[2] = preventDirection[2] > 0 ? 1 : preventDirection[2] == 0 ? 0 : -1;
-        // owner->localTransform.position = owner->localTransform.toMat4() * glm::vec4(preventDirection, 1.0);
     }
 
     void collisionDetectionSystem::exit()

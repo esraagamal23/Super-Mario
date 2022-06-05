@@ -26,11 +26,11 @@ namespace our {
         // Returns the owner of this component
         Entity* getOwner() const { return owner; }
         // Returns the root entity of this component
-        Entity* getRootOwner(Entity* ent)
-        {
-            if(!(ent->parent)) return ent;
-            getRootOwner(ent);
-        }
+        // Entity* getRootOwner(Entity* ent)
+        // {
+        //     if(!ent->parent) return ent;
+        //     return getRootOwner(ent);
+        // }
         // Define a virtual destructor
         virtual ~Component(){}
     };
