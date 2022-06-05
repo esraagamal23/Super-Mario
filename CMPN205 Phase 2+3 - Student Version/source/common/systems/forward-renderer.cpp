@@ -242,7 +242,7 @@ namespace our {
         // Get the location of the transform uniform
         for(auto command : opaqueCommands)
         {      
-           
+             command.material->setup();
             if(!lightCommands.empty())
             {
               
@@ -265,16 +265,6 @@ namespace our {
 
 
             { 
-                  std::cout<<lightCommands[i].type_light<<"\n";
-                  std::cout<<lightCommands[i].position[0]<<lightCommands[i].position[1]<<lightCommands[i].position[2]<<"\n";
-                  std::cout<<lightCommands[i].direction[0]<<"   "<<lightCommands[i].direction[1]<<lightCommands[i].direction[2]<<"\n";
-                  std::cout<<lightCommands[i].diffuse[0]<<lightCommands[i].diffuse[1]<<lightCommands[i].diffuse[2]<<"\n";
-                  std::cout<<lightCommands[i].specular[0]<<lightCommands[i].specular[1]<<lightCommands[i].specular[2]<<"\n";
-                  std::cout<<lightCommands[i].color[0]<<lightCommands[i].color[1]<<lightCommands[i].color[2]<<"\n";
-                  std::cout<<lightCommands[i].attenuation[0]<<lightCommands[i].attenuation[1]<<lightCommands[i].attenuation[2]<<"\n";
-                
-                  std::cout<<lightCommands[i].cone_angles[0]<<"      "<<lightCommands[i].cone_angles[1]<<"\n";
-                  
                   
 command.material->shader->set("lights["+std::to_string(i)+"].position",lightCommands[i].position);               
 command.material->shader->set("lights["+std::to_string(i)+"].direction",lightCommands[i].direction);               
@@ -299,8 +289,12 @@ command.material->shader->set("lights["+std::to_string(i)+"].cone_angles",(glm::
         
 
             }
-            command.material->setup();
-            command.material->shader->set("transform", VP * command.localToWorld);
+            else
+            {
+ command.material->shader->set("transform", VP * command.localToWorld);
+            }
+          
+           
             command.mesh->draw();
         }
         
