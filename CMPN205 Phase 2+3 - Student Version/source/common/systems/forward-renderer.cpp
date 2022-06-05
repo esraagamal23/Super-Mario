@@ -2,11 +2,16 @@
 #include "../mesh/mesh-utils.hpp"
 #include "../texture/texture-utils.hpp"
 
+#include <iostream>
+
 namespace our {
 
     void ForwardRenderer::initialize(glm::ivec2 windowSize, const nlohmann::json& config){
         // First, we store the window size for later use
         this->windowSize = windowSize;
+
+
+        
 
         // Then we check if there is a sky texture in the configuration
         if(config.contains("sky")){
@@ -48,6 +53,7 @@ namespace our {
             this->skyMaterial->tint = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
             this->skyMaterial->alphaThreshold = 1.0f;
             this->skyMaterial->transparent = false;
+            
         }
 
         // Then we check if there is a postprocessing shader in the configuration
@@ -112,6 +118,7 @@ namespace our {
             // so it is more performant to disable the depth mask
             postprocessMaterial->pipelineState.depthMask = false;
         }
+        
     }
 
     void ForwardRenderer::destroy(){
@@ -140,17 +147,37 @@ namespace our {
         CameraComponent* camera = nullptr;
         opaqueCommands.clear();
         transparentCommands.clear();
+        lightCommands.clear();
         for(auto entity : world->getEntities()){
             // If we hadn't found a camera yet, we look for a camera in this entity
             if(!camera) camera = entity->getComponent<CameraComponent>();
+
+            if(auto lightRenderer = entity->getComponent<LightningComponent>();lightRenderer )
+            {
+                 LightCommand light;
+                 light.type_light=lightRenderer->type;
+                 light.diffuse=lightRenderer->diffuse;
+                 light.color=lightRenderer->color;
+                 light.cone_angles=lightRenderer->cone_angles;
+                 light.direction=entity->localTransform.rotation;
+                 light.position=entity->localTransform.position;
+                 light.attenuation=lightRenderer->attenuation;
+                 light.specular=lightRenderer->specular;
+
+                 
+                 lightCommands.push_back(light);
+
+            }
             // If this entity has a mesh renderer component
             if(auto meshRenderer = entity->getComponent<MeshRendererComponent>(); meshRenderer){
                 // We construct a command from it
+                
                 RenderCommand command;
                 command.localToWorld = meshRenderer->getOwner()->getLocalToWorldMatrix();
                 command.center = glm::vec3(command.localToWorld * glm::vec4(0, 0, 0, 1));
                 command.mesh = meshRenderer->mesh;
                 command.material = meshRenderer->material;
+               
                 // if it is transparent, we add it to the transparent commands list
                 if(command.material->transparent){
                     transparentCommands.push_back(command);
@@ -214,9 +241,60 @@ namespace our {
 
         // Get the location of the transform uniform
         for(auto command : opaqueCommands)
-        {
-            command.material->setup();
-            command.material->shader->set("transform", VP * command.localToWorld);
+        {      
+             command.material->setup();
+            if(!lightCommands.empty())
+            {
+              
+         float angle = (float)glfwGetTime();
+
+        glm::vec3 eye = glm::vec3(2*glm::sin(angle), 1, 2*glm::cos(angle)); //glm::vec3(0, 0, 2); //
+
+       command.material->shader->set("eye",eye);
+ 
+        command.material->shader->set("M", command.localToWorld);
+       
+        command.material->shader->set("VP", VP);
+ 
+        command.material->shader->set("M_IT", glm::transpose(glm::inverse( command.localToWorld)));
+
+           ShaderProgram *lightShader= command.material->shader;
+           int light_size=lightCommands.size();
+          lightShader->set("light_count",light_size);  
+            for(int i=0; i < light_size;i++)
+
+
+            { 
+                  
+command.material->shader->set("lights["+std::to_string(i)+"].position",lightCommands[i].position);               
+command.material->shader->set("lights["+std::to_string(i)+"].direction",lightCommands[i].direction);               
+command.material->shader->set("lights["+std::to_string(i)+"].type",lightCommands[i].type_light);
+command.material->shader->set("lights["+std::to_string(i)+"].diffuse",lightCommands[i].diffuse);
+command.material->shader->set("lights["+std::to_string(i)+"].specular",lightCommands[i].specular);
+command.material->shader->set("lights["+std::to_string(i)+"].color",lightCommands[i].color);
+command.material->shader->set("lights["+std::to_string(i)+"].attenuation",lightCommands[i].attenuation);
+command.material->shader->set("lights["+std::to_string(i)+"].cone_angles",(glm::radians(lightCommands[i].cone_angles[0]), glm::radians(lightCommands[i].cone_angles[1])));
+
+
+
+
+
+            }
+        
+        command.material->shader->set ("sky.top",{ 0.3, 0.6, 1.0});
+        command.material->shader->set( "sky.middle",{ 0.3, 0.3, 0.3});
+        command.material->shader->set("sky.bottom",{ 0.1, 0.1, 0.0});
+
+         
+        
+
+            }
+            //else
+            {
+ command.material->shader->set("transform", VP * command.localToWorld);
+            }
+          
+           
             command.mesh->draw();
         }
         

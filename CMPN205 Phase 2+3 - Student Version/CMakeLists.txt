@@ -81,6 +81,8 @@ set(COMMON_SOURCES
         source/common/components/collision.hpp
         source/common/components/collision.cpp
 
+        source/common/components/lightning.cpp 
+        source/common/components/lightning.hpp 
         source/common/systems/forward-renderer.hpp
         source/common/systems/forward-renderer.cpp
         source/common/systems/free-camera-controller.hpp
