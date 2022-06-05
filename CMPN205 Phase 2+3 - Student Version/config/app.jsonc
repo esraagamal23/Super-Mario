@@ -11,7 +11,7 @@
     },
     "scene": {
         "renderer":{
-            //"sky": "assets/textures/sky.jpg",
+            "sky": "assets/textures/sky.jpg",
             "postprocess": "assets/shaders/postprocess/vignette.frag"
         },
         "assets":{
@@ -41,10 +41,10 @@
                 "monkey": "assets/textures/monkey.png",
 
                 "albedo":"assets/textures/albedo.jpg",
-                "specular":"assets/textures/specular.jpg",
-                "ambient_occlusion":"assets/textures/ambient_occlusion.jpg",
-                "roughness":"assets/textures/roughness.jpg",
-                "emissive":"assets/textures/emissive.jpg"
+                "specular":"assets/textures/monkey.png",
+                "ambient_occlusion":"assets/textures/monkey.png",
+                "roughness":"assets/textures/monkey.png",
+                "emissive":"assets/textures/monkey.png"
 
             },
             "meshes":{
@@ -124,10 +124,10 @@
                    
                     
                 "albedo":"albedo",
-                "specular":"specular",
+                "specular": "specular",
                 "ambient_occlusion":"ambient_occlusion",
                 "roughness":"roughness",
-                "emissive":"emissive",
+                "emissive": "emissive",
                     //"specular":"specular",
                 "tint": [1, 1, 1, 1],
                     "texture": "monkey",
@@ -212,21 +212,21 @@
                         "mesh": "monkey",
                         "material": "monkey"
                     },
-                    {
+                  /*  {
                         "type": "Movement",
                         "linearVelocity": [0, 0, 0],
                         "angularVelocity": [0, 45, 0]
-                    },
-                    {
+                    },*/
+                  /*  {
                         "type": "lighting",
-                        "type_light":2,
+                        "type_light":0,
                          "color":[1,1,1,1],
                          "cone_angles":[10.0,11.0],
                          "diffuse":[1,0.9,0.7],
                          "specular":[1,0.9,0.7],
                          "attenuation":[1,0,0]
                          
-                    },
+                    },*/
                     {
                         "type": "lighting",
                         "type_light":0,
@@ -311,8 +311,8 @@
                         "material": "glass"
                     }
                 ]
-            },*/
-           /* {
+            }*/,
+            {
                 "position": [0, 10, 0],
                 "rotation": [45, 45, 0],
                 "scale": [5, 5, 5],
@@ -327,7 +327,7 @@
                         "angularVelocity": [0, 90, 0]
                     }
                 ]
-            }*/
+            }
             
         ]
     }

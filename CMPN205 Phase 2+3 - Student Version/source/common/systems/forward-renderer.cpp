@@ -151,6 +151,7 @@ namespace our {
         for(auto entity : world->getEntities()){
             // If we hadn't found a camera yet, we look for a camera in this entity
             if(!camera) camera = entity->getComponent<CameraComponent>();
+            //check if component is lighting component
 
             if(auto lightRenderer = entity->getComponent<LightningComponent>();lightRenderer )
             {
@@ -242,38 +243,34 @@ namespace our {
         // Get the location of the transform uniform
         for(auto command : opaqueCommands)
         {      
-             command.material->setup();
+            command.material->setup();
             if(!lightCommands.empty())
             {
               
          float angle = (float)glfwGetTime();
 
-        glm::vec3 eye = glm::vec3(2*glm::sin(angle), 1, 2*glm::cos(angle)); //glm::vec3(0, 0, 2); //
-
+      glm::vec3 eye = glm::vec3(2*glm::sin(angle), 1, 2*glm::cos(angle)); //glm::vec3(0, 0, 2); //
        command.material->shader->set("eye",eye);
- 
-        command.material->shader->set("M", command.localToWorld);
-       
-        command.material->shader->set("VP", VP);
- 
-        command.material->shader->set("M_IT", glm::transpose(glm::inverse( command.localToWorld)));
+       command.material->shader->set("M", command.localToWorld);
+       command.material->shader->set("VP", VP);
+       command.material->shader->set("M_IT", glm::transpose(glm::inverse( command.localToWorld)));
 
-           ShaderProgram *lightShader= command.material->shader;
-           int light_size=lightCommands.size();
-          lightShader->set("light_count",light_size);  
-            for(int i=0; i < light_size;i++)
+        ShaderProgram *lightShader= command.material->shader;
+        int light_size=lightCommands.size();
+        lightShader->set("light_count",light_size);  
+        for(int i=0; i < light_size;i++)
 
 
-            { 
+        { 
                   
-command.material->shader->set("lights["+std::to_string(i)+"].position",lightCommands[i].position);               
-command.material->shader->set("lights["+std::to_string(i)+"].direction",lightCommands[i].direction);               
-command.material->shader->set("lights["+std::to_string(i)+"].type",lightCommands[i].type_light);
-command.material->shader->set("lights["+std::to_string(i)+"].diffuse",lightCommands[i].diffuse);
-command.material->shader->set("lights["+std::to_string(i)+"].specular",lightCommands[i].specular);
-command.material->shader->set("lights["+std::to_string(i)+"].color",lightCommands[i].color);
-command.material->shader->set("lights["+std::to_string(i)+"].attenuation",lightCommands[i].attenuation);
-command.material->shader->set("lights["+std::to_string(i)+"].cone_angles",(glm::radians(lightCommands[i].cone_angles[0]), glm::radians(lightCommands[i].cone_angles[1])));
+lightShader->set("lights["+std::to_string(i)+"].position",lightCommands[i].position);               
+lightShader->set("lights["+std::to_string(i)+"].direction",lightCommands[i].direction);               
+lightShader->set("lights["+std::to_string(i)+"].type",lightCommands[i].type_light);
+lightShader->set("lights["+std::to_string(i)+"].diffuse",lightCommands[i].diffuse);
+lightShader->set("lights["+std::to_string(i)+"].specular",lightCommands[i].specular);
+lightShader->set("lights["+std::to_string(i)+"].color",lightCommands[i].color);
+lightShader->set("lights["+std::to_string(i)+"].attenuation",lightCommands[i].attenuation);
+lightShader->set("lights["+std::to_string(i)+"].cone_angles",(glm::radians(lightCommands[i].cone_angles[0]), glm::radians(lightCommands[i].cone_angles[1])));
 
 
 
@@ -281,17 +278,17 @@ command.material->shader->set("lights["+std::to_string(i)+"].cone_angles",(glm::
 
             }
         
-        command.material->shader->set ("sky.top",{ 0.3, 0.6, 1.0});
-        command.material->shader->set( "sky.middle",{ 0.3, 0.3, 0.3});
-        command.material->shader->set("sky.bottom",{ 0.1, 0.1, 0.0});
+       lightShader->set ("sky.top",{ 0.3, 0.6, 1.0});
+        lightShader->set( "sky.middle",{ 0.3, 0.3, 0.3});
+       lightShader->set("sky.bottom",{ 0.1, 0.1, 0.0});
 
          
         
 
             }
-            else
+           // else
             {
- command.material->shader->set("transform", VP * command.localToWorld);
+            command.material->shader->set("transform", VP * command.localToWorld);
             }
           
            
