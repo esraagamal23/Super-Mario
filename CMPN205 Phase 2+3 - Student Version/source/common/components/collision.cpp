@@ -8,7 +8,10 @@ namespace our {
     {
         Entity* entity = getOwner();
         if(!entity)
-        std::cerr << "error" << std::endl;
+        {
+            std::cerr << "Error: There is no entity for this component" << std::endl;
+            std::exit(-1);
+        }
         MeshRendererComponent *meshRenderer = entity->getComponent<MeshRendererComponent>();
         if(!meshRenderer)
         {
@@ -46,7 +49,6 @@ namespace our {
         return glm::sqrt(glm::pow(point1[0] - point2[0], 2) + glm::pow(point1[1] - point2[1], 2) + glm::pow(point1[2] - point2[2], 2));
     }
 
-    // Reads linearVelocity & angularVelocity from the given json object
     void CollisionComponent::deserialize(const nlohmann::json& data){
         if(!data.is_object()) return;
         boundingBoxCenter = data.value("boundingBoxCenter", boundingBoxCenter);
