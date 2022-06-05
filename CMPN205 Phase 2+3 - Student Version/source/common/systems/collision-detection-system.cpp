@@ -62,16 +62,39 @@ namespace our{
 
         float distance = comp1->calculateRadius(comp1Center, comp2Center);
         float radius_sum = comp1Radius + comp2Radius;
-        return distance < radius_sum / 2;
+        return distance < radius_sum ;
     }
 
     void collisionDetectionSystem::preventCollision(CollisionComponent* player, CollisionComponent* comp)
     {
         Entity* owner1 = player->getOwner();
         Entity* owner2 = comp->getOwner();
+        Entity* health;
+        auto entities = owner2->getWorld()->getEntities();
+        for(auto entity : entities)
+        {
+            if(entity->getComponent<MeshRendererComponent>())
+            {
+                if(entity->getComponent<MeshRendererComponent>()->mesh->name =="health")
+                {  
+                    health = entity;
+                    break;
+                }
+            }
+        }
+        std::cout<<"stop------------------------------------";
         if(owner2)
         {
-            owner2->localTransform.scale = glm::vec3(0, 0, 0);
+            owner2->localTransform.position = glm::vec3(FLT_MAX, FLT_MAX, FLT_MAX);
+            if(owner2->getComponent<MeshRendererComponent>()->mesh->name == "coin")
+            {
+                if(health->localTransform.scale.x <2.5)
+                    health->localTransform.scale.x += 0.5;
+            }
+            if(owner2->getComponent<MeshRendererComponent>()->mesh->name == "bomb")
+            {
+                health->localTransform.scale.x -= 0.5;
+            }
         }
         
     }

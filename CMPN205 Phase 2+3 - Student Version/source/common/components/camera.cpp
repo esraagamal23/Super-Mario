@@ -41,7 +41,8 @@ namespace our {
         // The direction where the camera looking at in the object space
         glm::vec4 center = {0, 0, -1, 1};
         // The up direction of the camera in the object space
-        glm::vec4 up = {0, 1, 0, 1};
+        //glm::vec4 up = {0, 1, 0, 1};
+        glm::vec4 up = {0, 1, 0, 0};
 
         // Here we translate the camera's coordinates into the world space
         // Then get the matrix

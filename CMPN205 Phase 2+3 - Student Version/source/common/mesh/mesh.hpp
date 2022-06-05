@@ -25,6 +25,7 @@ namespace our {
         float minX, maxX;
         float minY, maxY;
         float minZ, maxZ;
+        std::string name;
         // The constructor takes two vectors:
         // - vertices which contain the vertex data.
         // - elements which contain the indices of the vertices out of which each rectangle will be constructed.
