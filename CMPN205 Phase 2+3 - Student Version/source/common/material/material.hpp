@@ -55,7 +55,7 @@ namespace our {
     };
 
  //////esraa add
-class LitMaterial :public TexturedMaterial
+class LitMaterial :public Material
 {
  
    Texture2D* albedo;
@@ -63,9 +63,8 @@ class LitMaterial :public TexturedMaterial
     Texture2D* ambient_occlusion;
     Texture2D*roughness;
     Texture2D* emissive;
-        Texture2D* texture;
-        Sampler* sampler;
-        float alphaThreshold;
+   Sampler* sampler;
+        
 
     void setup() const override;
     void deserialize(const nlohmann::json& data) override;
@@ -75,17 +74,28 @@ class LitMaterial :public TexturedMaterial
 };
     // This function returns a new material instance based on the given type
     inline Material* createMaterialFromType(const std::string& type){
-        if(type == "tinted"){
+    
+        if(type == "tinted")
+        {
             return new TintedMaterial();
-        } else if(type == "textured"){
+        }
+         else if(type == "textured")
+         {
             return new TexturedMaterial();
-        }else if(type == "lighting")
+
+        
+        
+        
+        }
+        
+        else if(type == "lighting")
         {
 
                return new LitMaterial();
         } 
         
-        else {
+        else
+         {
             return new Material();
         }
     }

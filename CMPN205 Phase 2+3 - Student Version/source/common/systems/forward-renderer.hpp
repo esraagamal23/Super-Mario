@@ -3,6 +3,7 @@
 #include "../ecs/world.hpp"
 #include "../components/camera.hpp"
 #include "../components/mesh-renderer.hpp"
+#include "../components/lightning.hpp"
 #include "../asset-loader.hpp"
 #include "GLFW/glfw3.h"
 #include <glad/gl.h>
@@ -21,6 +22,20 @@ namespace our
         Mesh* mesh;
         Material* material;
     };
+    struct LightCommand
+    {
+          int type_light;
+           glm::vec4 color;
+           glm::vec3 diffuse;
+           glm::vec3 specular;
+           glm::vec3 attenuation;
+           glm::vec2 cone_angles;
+           glm::vec3 direction;
+           glm::vec3 position;   
+
+
+
+    };
 
     // A forward renderer is a renderer that draw the object final color directly to the framebuffer
     // In other words, the fragment shader in the material should output the color that we should see on the screen
@@ -32,6 +47,7 @@ namespace our
         // These are two vectors in which we will store the opaque and the transparent commands.
         // We define them here (instead of being local to the "render" function) as an optimization to prevent reallocating them every frame
         std::vector<RenderCommand> opaqueCommands;
+        std::vector<LightCommand> lightCommands;
         std::vector<RenderCommand> transparentCommands;
         // Objects used for rendering a skybox
         Mesh* skySphere;
@@ -40,6 +56,7 @@ namespace our
         GLuint postprocessFrameBuffer, postProcessVertexArray;
         Texture2D *colorTarget, *depthTarget;
         TexturedMaterial* postprocessMaterial;
+       
     public:
         // Initialize the renderer including the sky and the Postprocessing objects.
         // windowSize is the width & height of the window (in pixels).

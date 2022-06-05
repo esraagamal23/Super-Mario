@@ -1,25 +1,29 @@
 #pragma once
 
 #include "../ecs/component.hpp"
-#include "../mesh/mesh.hpp"
-#include "../material/material.hpp"
-#include "../asset-loader.hpp"
+
+#include <glm/glm.hpp>
 
 namespace our {
 
-    // This component denotes that any renderer should draw the given mesh using the given material at the transformation of the owning entity.
+   
     class LightningComponent : public Component {
 
       public:
         
+          int type=1;
+        
+          glm::vec4 color={1,0,0,0};
+          glm::vec2 cone_angles={10.0f, 1.0f};
+           glm::vec3 attenuation={1, 0, 0};
+            glm::vec3 diffuse= {1, 0.9, 0.7};
+           glm::vec3 specular={1, 0.9, 0.7};
+           
+        
        
-          int type_light;
-          glm::vec4 color;
-         glm::ec2 cone_angles; // x: inner_angle, y: outer_angle  
-        // The ID of this component type is "Mesh Renderer"
        static std::string getID() { return "lighting"; }
 
-        // Receives the mesh & material from the AssetLoader by the names given in the json object
+       
         void deserialize(const nlohmann::json& data) override;
 
     

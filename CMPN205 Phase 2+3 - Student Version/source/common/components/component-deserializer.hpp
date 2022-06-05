@@ -5,6 +5,7 @@
 #include "mesh-renderer.hpp"
 #include "free-camera-controller.hpp"
 #include "movement.hpp"
+#include "lightning.hpp"
 
 namespace our {
 
@@ -15,13 +16,21 @@ namespace our {
         Component* component = nullptr;
         if(type == CameraComponent::getID()){
             component = entity->addComponent<CameraComponent>();
-        } else if (type == MeshRendererComponent::getID()) {
+        }else if(type == LightningComponent::getID())
+
+        {
+          component=entity->addComponent<LightningComponent>();
+
+        } 
+        else if (type == MeshRendererComponent::getID()) {
             component = entity->addComponent<MeshRendererComponent>();
         } else if (type == FreeCameraControllerComponent::getID()) {
             component = entity->addComponent<FreeCameraControllerComponent>();
-        } else if (type == MovementComponent::getID()) {
+        } else if (type == MovementComponent::getID()) {    
             component = entity->addComponent<MovementComponent>();
         }
+       
+       
         if(component) component->deserialize(data);
     }
 
