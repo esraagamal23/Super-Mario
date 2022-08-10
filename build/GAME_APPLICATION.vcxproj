@@ -369,6 +369,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\component-deserializer.hpp" />
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\collision.hpp" />
     <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\collision.cpp" />
+    <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\lightning.cpp" />
+    <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\components\lightning.hpp" />
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.hpp" />
     <ClCompile Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\forward-renderer.cpp" />
     <ClInclude Include="D:\study affairs\syllabus\3rd year\2nd semester\computer graphics\CG_Phase2\CMPN205 Phase 2+3 - Student Version\source\common\systems\free-camera-controller.hpp" />
